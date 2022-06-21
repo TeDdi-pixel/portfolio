@@ -185,8 +185,18 @@ body{
     flex-wrap: wrap;
 }
 
+.card_container{
+    
+}
+
+
+
 .card_wrapper{
     padding: 28px;
+    transition: all 0.2s ease;
+}
+.card_wrapper:hover{
+    transform: scale(0.9);
 }
 
 .card_text1{
@@ -275,7 +285,12 @@ body{
             border: 1px solid #000000;
             border-radius: 200px;
             @include font_Inter;
-
+            font-size: 18px;
+            transition: all 0.2s ease;
+        }
+        button:hover{
+            background-color: #DCE5E2; 
+            transform: scale(0.95);
         }
 
         img{
@@ -437,6 +452,12 @@ body{
             border-radius: 200px;
             padding: 12px 22px 13px 22px;
             margin:0 7px 7px 0;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .choice:hover{
+            background-color: #DCE5E2;
+            transform: scale(0.95);
         }
     }
     
@@ -506,7 +527,13 @@ body{
         width: 115px;
         background-color: black;
         color: #FFF; 
-        @include font_Inter; 
+        @include font_Inter;
+        transition: all 0.2s ease; 
+        border: 1px solid black;
+    }
+    #email:hover{
+        background-color: #04C75B;
+        
     }
     
 }
@@ -579,6 +606,9 @@ body{
         font-size: 16px;
         @include font_Inter;  
     }   
+    .underlogo_text{
+        line-height: 19px;
+    }
     .text1{
         @include font_Inter;  
         font-size: 17px;

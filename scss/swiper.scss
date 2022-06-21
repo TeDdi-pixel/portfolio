@@ -37,7 +37,13 @@ border-radius: 32px;
         border: 1px solid #000000;
         border-radius: 200px;
         @include font_Inter;
+        transition: all 0.2s ease;
+        font-size: 18px;
     }    
+    button:hover{
+        background-color: white; 
+        transform: scale(0.95);
+    }
 }
 .swiper-slider__image{
     max-width: 100%;
@@ -50,4 +56,25 @@ border-radius: 32px;
         font-size: 24px;
     }
 }
+
+.image-slider{
+    .swiper-pagination{
+        margin-bottom: 34px;
+    }
+    .bulletActiveClass{
+        background-color: white;
+    }
+    .swiper-pagination-bullet{
+    
+       width: 194px;
+       height: 2px;
+       bottom: 34px;
+       background-color: #000000;
+       border-radius: 0px;
+       font-size: 14px;
+       
+    }
+}
+
+
 

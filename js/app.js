@@ -1,10 +1,19 @@
-new Swiper('.image-slider',{
+const swiper = new Swiper(".image-slider", {
     navigation: {
-        nextEL: '.swiper-button-next',
-        prevEL: '.swiper-button-prev'
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    pagination:{
-        el: 'swiper-pagination',
-        clickable:true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+      //dynamicBullets: true,
     },
-});    
+  });
+
+let arrow = document.querySelector('.arrow');
+let ddblock = document.querySelector('.ddmenu');
+  
+//arrow.addEventListener("click", () => {
+ //   ddblock.classList.toggle("show");
+//});

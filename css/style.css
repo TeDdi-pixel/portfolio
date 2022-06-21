@@ -107,6 +107,7 @@ h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
+  vertical-align: middle;
 }
 
 .logo {
@@ -121,6 +122,14 @@ h6 {
   margin-right: 33px;
 }
 
+.scnd {
+  margin-bottom: 13px;
+}
+
+.nav_bar {
+  position: relative;
+}
+
 .nav_bar a {
   text-decoration: none;
   color: #000;
@@ -128,6 +137,7 @@ h6 {
 
 .arrow {
   margin: 0 35px 0 3px;
+  vertical-align: middle;
 }
 
 .thrd {
@@ -142,6 +152,13 @@ h6 {
   text-transform: uppercase;
   color: #000;
   padding: 31px 0 0 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.nav_bar_item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .add_nav_bar_item {
@@ -155,6 +172,35 @@ h6 {
 
 .add_nav_bar_item:last-child {
   margin-right: 40px;
+}
+
+.ddmenu {
+  position: absolute;
+  max-width: 100%;
+  width: 150px;
+  min-height: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-color: white;
+  left: 138px;
+  z-index: 10;
+  -webkit-box-shadow: 0 0 10px rgb(66, 66, 66);
+          box-shadow: 0 0 10px rgb(66, 66, 66);
+  border-radius: 3px;
+}
+.ddmenu ul {
+  padding: 10px 5px;
+}
+.ddmenu ul li {
+  margin-bottom: 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.show {
+  opacity: 0;
 }
 
 .slider__container {
@@ -198,6 +244,14 @@ h6 {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 18px;
+}
+.image-slider__slide button:hover {
+  background-color: white;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .swiper-slider__image {
@@ -208,6 +262,21 @@ h6 {
 .image-slider .swiper-button-prev::after {
   color: black;
   font-size: 24px;
+}
+
+.image-slider .swiper-pagination {
+  margin-bottom: 34px;
+}
+.image-slider .bulletActiveClass {
+  background-color: white;
+}
+.image-slider .swiper-pagination-bullet {
+  width: 194px;
+  height: 2px;
+  bottom: 34px;
+  background-color: #000000;
+  border-radius: 0px;
+  font-size: 14px;
 }
 
 body {
@@ -432,6 +501,13 @@ body {
 
 .card_wrapper {
   padding: 28px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.card_wrapper:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .card_text1 {
@@ -544,6 +620,14 @@ body {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
+  font-size: 18px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.the_best_items_container button:hover {
+  background-color: #DCE5E2;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 .the_best_items_container img {
   margin-top: 30px;
@@ -721,6 +805,14 @@ body {
   border-radius: 200px;
   padding: 12px 22px 13px 22px;
   margin: 0 7px 7px 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.looking_for .choice_container .choice:hover {
+  background-color: #DCE5E2;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .never-miss__container {
@@ -791,6 +883,12 @@ body {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 1px solid black;
+}
+.never-miss__container #email:hover {
+  background-color: #04C75B;
 }
 
 #footer {
@@ -862,6 +960,9 @@ body {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+#footer .underlogo_text {
+  line-height: 19px;
 }
 #footer .text1 {
   font-family: "Inter", sans-serif;
