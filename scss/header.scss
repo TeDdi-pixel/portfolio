@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+@mixin font_Inter {
+    font-family: 'Inter', sans-serif;   
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin font_Readex_Pro {
+    font-family: 'Readex Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#header{
+    width: 100%;
+    margin-bottom: 57px;
+
+}
+
+.nav_conteiner{
+    width: 1350px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+}
+
+
+
+.logo{
+    padding: 22px 0 0 0;
+    
+}
+
+.additional_btns{
+    margin-right: 103px;
+}
+
+.frst{
+    margin-right: 33px;
+}
+
+.nav_bar a{
+    text-decoration: none;
+    color: #000;
+}
+
+.arrow{
+    margin: 0 35px 0 3px;
+}
+
+.thrd{
+    margin-right: 44px;
+}
+
+.nav_bar_item{
+    display: inline-block;
+    @include font_Inter;
+    text-transform: uppercase;
+    color: #000;
+    padding:31px 0 0 0;
+}
+
+.add_nav_bar_item{
+    display: inline-block;
+    padding:31px 0 0 0;
+}
+
+.add_nav_bar_item:first-child{
+    margin-right: 27px;
+}
+.add_nav_bar_item:last-child{
+    margin-right: 40px;
+}
+
+
+
+

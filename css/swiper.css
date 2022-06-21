@@ -1,0 +1,17 @@
+.image-slider {
+  padding: 30px 0 70px 0;
+}
+
+.image-slider__slide {
+  text-align: center;
+}
+
+.swiper-slider__image {
+  max-width: 100%;
+}
+
+.image-slider .swiper-button-next::after,
+.image-slider .swiper-button-prev::after {
+  color: black;
+  font-size: 24px;
+}

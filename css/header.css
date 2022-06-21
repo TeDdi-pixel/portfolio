@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 auto 57px auto;
+}
+
+.nav_conteiner {
+  width: 92.85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  padding: 22px 0 0 0;
+  margin-left: 5.05%;
+}
+
+.additional_btns {
+  margin-right: 103px;
+}
+
+.frst {
+  margin-right: 33px;
+}
+
+.nav_bar a {
+  text-decoration: none;
+  color: #000;
+}
+
+.arrow {
+  margin: 0 35px 0 3px;
+}
+
+.thrd {
+  margin-right: 44px;
+}
+
+.nav_bar_item {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  padding: 31px 0 0 0;
+}
+
+.add_nav_bar_item {
+  display: inline-block;
+  padding: 31px 0 0 0;
+}
+
+.add_nav_bar_item:first-child {
+  margin-right: 27px;
+}
