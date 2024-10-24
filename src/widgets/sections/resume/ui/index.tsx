@@ -1,26 +1,28 @@
 import { Element } from "react-scroll";
 import useWidth from "../../../../hooks/useWidth";
-import Section from "../../../../shared/section";
 import { Title } from "../../../../entities/sectionTitle";
 import AnimatedDiv from "../../../../shared/animatedDiv";
+import DefaultSection from "../../../../shared/section/DefaultSection";
 
 export const SummarySection = () => {
   const { active } = useWidth(1296);
+  const { active: active2 } = useWidth(500);
   return (
-    <Section>
+    <DefaultSection>
       <Element name="Summary" />
       <Title
         title="Summary"
         mb={`mb-[15px] sm:mb-[15px] ${
           active ? "lg:mb-[10px]" : "lg:mb-[0px]"
-        } `}
+        } ${active2 ? "mt-[125.75px]" : "mt-[87.5px]"}`}
       />
       <div
         className={`flex flex-col md:flex-row justify-center items-center gap-12 xl:gap-44`}
       >
         <AnimatedDiv
+        isBlur
           x={-50}
-          delay={0.6}
+          delay={0.4}
           duration={0.8}
           className="text-accent text-[16px] md:text-[18px] lg:text-[23px] max-w-[778px] break-words"
         >
@@ -36,7 +38,7 @@ export const SummarySection = () => {
         <AnimatedDiv
           isBlur
           duration={0.8}
-          delay={0.6}
+          delay={0.5}
           x={50}
           className="flex-shrink-0 max-w-[280px] max-h-[280px] w-full h-full  xl:max-w-[380px] xl:max-h-[380px]  rounded-full overflow-hidden relative "
         >
@@ -47,6 +49,6 @@ export const SummarySection = () => {
           />
         </AnimatedDiv>
       </div>
-    </Section>
+    </DefaultSection>
   );
 };

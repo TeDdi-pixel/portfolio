@@ -1,14 +1,12 @@
 import AnimatedDiv from "../../../shared/animatedDiv";
 import { links } from "../config";
 import { Link } from "react-scroll";
+import { useHeaderStore } from "../store";
 
-export const HeaderNavigation = ({
-  setSelectedLink,
-}: {
-  setSelectedLink: (linkText: string) => void;
-}) => {
+export const HeaderNavigation = () => {
+  const { setSelectedLink } = useHeaderStore((state) => state);
   return (
-    <nav className="flex items-center">
+    <nav className="hidden lg:flex items-center">
       <AnimatedDiv duration={0.5} x={50} isBlur>
         <ul className="flex items-center divide-x-[1px] divide-accent">
           {links.map((link) => (

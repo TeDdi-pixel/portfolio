@@ -11,6 +11,63 @@
   border-radius: 99px !important;
 }
 
+.swiper-button-prev, .swiper-button-next {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 20px !important; 
+}
+
+.swiper-button-next {
+  min-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+  color: transparent;
+  transition:
+    transform 0.3s ease,
+    opacity ease 0.5s;
+  background-color: hsl(var(--green));
+  opacity: 0.5;
+}
+
+.swiper-button-prev {
+  left: auto !important;
+  right: 50px !important;
+  min-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+  color: transparent;
+  transition:
+    transform 0.3s ease,
+    opacity ease 0.5s;
+  background-color: hsl(var(--green));
+  opacity: 0.5;
+}
+
+.swiper-button-next::after {
+  background-color: hsl(var(--background2));
+  mask: url("/arrow_right.svg") no-repeat center;
+  -webkit-mask: url("/arrow_right.svg") no-repeat center;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  color: transparent;
+}
+
+.swiper-button-prev::after {
+  background-color: hsl(var(--background2));
+  mask: url("/arrow_left.svg") no-repeat center;
+  -webkit-mask: url("/arrow_left.svg") no-repeat center;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  color: transparent;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
 #root {
   overflow-x: hidden;
 }
@@ -19,7 +76,7 @@
   font-size: 14px;
   font-weight: 400;
   min-height: 2000px;
-  background-color: #131b25;
+  background-color: hsl(213, 32%, 11%);
 }
 
 @layer base {
@@ -33,7 +90,7 @@
     --yellow: 49, 91%, 52%;
 
     --accent: var(--white);
-    --background: 0 0% 100%;
+    --background: 213, 32%, 11%;
     --background2: 213, 39%, 12%;
     --foreground: 0, 0%, 90%;
     --card: 0 0% 100%;

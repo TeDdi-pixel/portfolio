@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import useWidth from "../../hooks/useWidth";
 
-const Section = ({ children }: { children: ReactNode }) => {
+const DefaultSection = ({ children }: { children: ReactNode }) => {
   const { active } = useWidth(500);
   return (
     <section
@@ -14,4 +14,4 @@ const Section = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default Section;
+export default DefaultSection;

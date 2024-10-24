@@ -1,20 +1,18 @@
-#nav-icon2{
-    flex-shrink: 0;
-    z-index: 100;
-    width: 40px;
-    height: 25px;
-    position: fixed;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    cursor: pointer;
-  }
-
+#nav-icon2 {
+  flex-shrink: 0;
+  z-index: 100;
+  width: 40px;
+  height: 25px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
 
 #nav-icon2 span {
   display: block;
@@ -27,10 +25,10 @@
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 #nav-icon2 span:nth-child(even) {
@@ -39,30 +37,35 @@
 }
 
 #nav-icon2 span:nth-child(odd) {
-  left:0px;
+  left: 0px;
   border-radius: 9px 0 0 9px;
 }
 
-#nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
+#nav-icon2 span:nth-child(1),
+#nav-icon2 span:nth-child(2) {
   top: 0px;
 }
 
-#nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4) {
+#nav-icon2 span:nth-child(3),
+#nav-icon2 span:nth-child(4) {
   top: 12px;
 }
 
-#nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6) {
+#nav-icon2 span:nth-child(5),
+#nav-icon2 span:nth-child(6) {
   top: 24px;
 }
 
-#nav-icon2.open span:nth-child(1),#nav-icon2.open span:nth-child(6) {
+#nav-icon2.open span:nth-child(1),
+#nav-icon2.open span:nth-child(6) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-#nav-icon2.open span:nth-child(2),#nav-icon2.open span:nth-child(5) {
+#nav-icon2.open span:nth-child(2),
+#nav-icon2.open span:nth-child(5) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);

@@ -1,25 +1,20 @@
-import { useState } from "react";
 import useWidth from "../../../hooks/useWidth";
 import AnimatedDiv from "../../../shared/animatedDiv";
 import { PopUpNavigation } from "../../popUpNavigation";
 import { HeaderNavigation } from "./HeaderNavigation";
-import { links } from "../config";
-// import { BurgerMenu } from "../../burgerMenu";
-// type Props = {
-//   open: boolean;
-//   setOpen: (status: boolean) => void;
-// };
+import { useHeaderStore } from "../store";
+import { BurgerMenu } from "../../burgerMenu";
 
 export const Header = () => {
-  const [selectedLink, setSelectedLink] = useState<string | null>(
-    links[0].text
-  );
-
-  const { active, scrollPosition } = useWidth(876);
-  const { active: active2 } = useWidth(500);
+  const { active, scrollPosition } = useWidth(500);
+  const { burgerMenu } = useHeaderStore((state) => state);
   return (
     <header
-      className={`flex justify-between pt-[30px] mb-[87.5px] md:mb-[143.5px] gap-8`}
+      className={`${
+        active
+          ? "fixed top-0 left-0 px-[15px] z-[200] bg-background py-[20px] shadow-custom"
+          : "relative pt-[30px]"
+      } flex justify-between gap-6 items-center`}
     >
       <AnimatedDiv
         isBlur
@@ -32,22 +27,16 @@ export const Header = () => {
         </div>
         <div
           className={`text-[16px] text-accent inline-block ${
-            active2 ? "pl-[34.5px]" : "pl-0"
+            active ? "pl-[34.5px]" : "pl-0"
           }`}
         >
           Front-end developer
         </div>
       </AnimatedDiv>
-      {!active ? (
-        <HeaderNavigation setSelectedLink={setSelectedLink} />
-      ) : null
-      // <BurgerMenu open={open} setOpen={setOpen} />
-      }
-      {scrollPosition >= 63 ? (
-        <PopUpNavigation
-          selectedLink={selectedLink}
-          setSelectedLink={setSelectedLink}
-        />
+      <HeaderNavigation />
+      <BurgerMenu />
+      {scrollPosition >= 63 && !burgerMenu && !active ? (
+        <PopUpNavigation />
       ) : null}
     </header>
   );

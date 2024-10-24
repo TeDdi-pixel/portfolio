@@ -9,6 +9,9 @@ export const links = [
     text: "Projects",
   },
   {
+    text: "Education",
+  },
+  {
     text: "Contacts",
   },
 ];

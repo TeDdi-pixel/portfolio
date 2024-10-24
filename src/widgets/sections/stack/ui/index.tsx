@@ -5,8 +5,17 @@ import { stackPhotos } from "../../../../pages/homePage/config";
 import { motion } from "framer-motion";
 
 export const StackSection = () => {
-  const { active } = useWidth(432);
+  const { active } = useWidth(500);
   const { active: active2 } = useWidth(1386);
+  const handleDelay = (photoId: number) => {
+    let delay;
+    if (photoId === 0) {
+      delay = 0.1;
+    } else if (photoId === 1) {
+      delay = 0.2;
+    } else delay = photoId * 0.15;
+    return delay;
+  };
   return (
     <div className="bg-background2 py-[87.5px] md:py-[143px]">
       <section
@@ -24,9 +33,9 @@ export const StackSection = () => {
           >
             {stackPhotos.map((photo) => (
               <motion.div
-                id={`photo-${photo.id}`}
+                className={`max-w-[100px] max-h-[100px] sm:max-w-[150px] sm:max-h-[150px] w-full h-full`}
                 key={photo.id}
-                className={`max-w-[100px] max-h-[100px] sm:max-w-[150px] sm:max-h-[150px] w-full h-full `}
+                id={`photo-${photo.id}`}
                 viewport={{ once: true }}
                 initial={{
                   opacity: 0,
@@ -39,19 +48,14 @@ export const StackSection = () => {
                   filter: "blur(0px)",
                   transition: {
                     duration: 0.8,
-                    delay:
-                      photo.id === 0
-                        ? 0.2
-                        : photo.id === 1
-                        ? 0.4
-                        : photo.id * 0.2,
+                    delay: handleDelay(photo.id),
                   },
                 }}
               >
                 <img
                   src={photo.path}
                   alt={photo.alt}
-                  className={`object-contain max-w-[100px] max-h-[100px] sm:max-w-[150px] sm:max-h-[150px] w-full h-full ${
+                  className={`object-contain max-w-[100px] max-h-[100px] sm:max-w-[150px] sm:max-h-[150px] w-full h-full hover:scale-110 transition-transform ${
                     photo.alt === "js_logo" ? "rounded-[17px]" : ""
                   }`}
                 />

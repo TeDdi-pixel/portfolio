@@ -39,6 +39,12 @@ export const stackPhotos = [
   },
   {
     id: 14,
+    alt: "zustand_logo",
+    path: "./zustand_logo.webp",
+    tooltip: "zustand",
+  },
+  {
+    id: 15,
     alt: "github_logo",
     path: "./github_logo.webp",
     tooltip: "GitHub",

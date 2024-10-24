@@ -1,24 +1,31 @@
-import { Element } from "react-scroll";
-import { Title } from "../../entities/sectionTitle";
-import Section from "../../shared/section";
 import {
   ProjectsSection,
   StackSection,
   SummarySection,
 } from "../../widgets/sections";
-import { Footer } from "../../widgets/footer";
 import { Header } from "../../widgets/header";
+import { useEffect, useRef } from "react";
+import { useHeaderStore } from "../../widgets/header/store";
+import { ContactsSection } from "../../widgets/sections/contacts";
+import { EducationSection } from "../../widgets/sections/education/ui";
 
 const HomePage = () => {
-  // const [menuOpen, setMenuOpen] = useState(false);
+  // const { active } = useWidth(1024);
+  const { burgerMenu } = useHeaderStore((state) => state);
+  const homePageRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (burgerMenu) {
+      document.body.style.overflow = "hidden";
+    } else document.body.style.overflow = "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [burgerMenu]);
+
   return (
-    <div
-    // className={`${
-    //   menuOpen
-    //     ? "fixed inset-0 z-20 bg-black opacity-50 backdrop-blur-sm"
-    //     : ""
-    // }`}
-    >
+    <div ref={homePageRef}>
       <div className="mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] max-w-[1400px]">
         <Header />
         <SummarySection />
@@ -27,15 +34,10 @@ const HomePage = () => {
       <StackSection />
 
       <div className="mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] max-w-[1400px]">
-        <div className="py-[87.5px] md:py-[143px]">
-          <ProjectsSection />
-        </div>
-        <Section>
-          <Element name="Contacts" />
-          <Title title="Contacts" />
-        </Section>
-        <Footer />
+        <ProjectsSection />
+        <EducationSection />
       </div>
+      <ContactsSection />
     </div>
   );
 };

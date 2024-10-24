@@ -9,7 +9,7 @@ const ProjectDescription = ({
 }) => {
   return (
     <AnimatedDiv
-      delay={0.7}
+      delay={0.5}
       x={-50}
       isBlur
       className={`text-accent text-[14px] ${
