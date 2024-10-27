@@ -4,16 +4,18 @@ import { Title } from "../../../../entities/sectionTitle";
 import { stackPhotos } from "../../../../pages/homePage/config";
 import { motion } from "framer-motion";
 import { stackPhotoWrapperConfig } from "../config";
+import useFirstAnimation from "../../../../hooks/useFirstAnimation";
 export const StackSection = () => {
   const { active } = useWidth(500);
   const { active: active2 } = useWidth(1386);
-  const { active: active3 } = useWidth(398);
-
-  const handleDelay = (photoId: number): number => {
-    if (photoId === 0) return 0.05;
-    if (photoId === 1) return 0.08;
-    return photoId * 0.03;
+  const { active: active3 } = useWidth(461);
+  const firstAnimation = useFirstAnimation();
+  const handleDelay = (photoId: number): { delay: number; active: boolean } => {
+    if (photoId === 0) return { delay: 0.05, active: active3 };
+    if (photoId === 1) return { delay: 0.06, active: active3 };
+    return { delay: photoId * (firstAnimation ? 0.03 : 0.01), active: active3 };
   };
+
   return (
     <div className="bg-background py-[87.5px] md:py-[143px]">
       <section
@@ -21,7 +23,7 @@ export const StackSection = () => {
           active ? "px-[15px]" : "px-[34.5px]"
         }  sm:px-[34.5px]`}
       >
-        <Element name="Stack" />
+        <Element name="Hard skills" />
         <div className=" px-[15px] md:px-[30px] lg:px-[50px] ">
           <Title title="Hard skills" emoji="🚀" />
           <div

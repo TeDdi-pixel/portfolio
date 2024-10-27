@@ -3,10 +3,13 @@ export const links = [
     text: "Summary",
   },
   {
-    text: "Stack",
+    text: "Hard skills",
   },
   {
     text: "Projects",
+  },
+  {
+    text: "Soft skills",
   },
   {
     text: "Education",

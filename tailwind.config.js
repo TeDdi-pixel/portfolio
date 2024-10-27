@@ -65,8 +65,11 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        custom:
-          "rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;",
+        custom: "rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;",
+      },
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+        "spin-fast": "spin 0.5s linear infinite",
       },
     },
   },

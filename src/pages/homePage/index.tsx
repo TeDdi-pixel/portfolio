@@ -1,5 +1,6 @@
 import {
   ProjectsSection,
+  SoftSkillsSection,
   StackSection,
   SummarySection,
 } from "../../widgets/sections";
@@ -31,12 +32,16 @@ const HomePage = () => {
 
       <StackSection />
 
-      <div className="bg-background2 w-full rounded-3xl">
+      <div className="bg-background2 rounded-3xl">
         <ProjectsSection />
       </div>
+      
       <div className="max-w-[1400px] mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] pt-[87.5px] md:pt-[143px]">
-        <EducationSection />
+        <SoftSkillsSection/>
       </div>
+        <div className="bg-purple rounded-3xl">
+        <EducationSection />
+        </div>
       <ContactsSection />
     </div>
   );

@@ -1,15 +1,13 @@
-import AnimatedDiv from "../../../../shared/animatedDiv";
-
+import { motion } from "framer-motion";
+import { projectNameConfig } from "../config/projectName";
 export const ProjectName = ({ name }: { name: string }) => {
   return (
-    <AnimatedDiv
+    <motion.div
       className={`text-texture text-[24px] sm:text-[28px] lg:text-[32px] mb-2`}
-      delay={0.3}
-      x={-50}
-      isBlur
+      {...projectNameConfig}
     >
       {name}
-    </AnimatedDiv>
+    </motion.div>
   );
 };
 

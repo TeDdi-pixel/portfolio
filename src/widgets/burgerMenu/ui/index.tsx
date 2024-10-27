@@ -2,8 +2,12 @@ import { Link } from "react-scroll";
 import { links } from "../../header/config";
 import { useHeaderStore } from "../../header/store";
 import { AnimatePresence, motion } from "framer-motion";
+import useFirstAnimation from "../../../hooks/useFirstAnimation";
+import useWidth from "../../../hooks/useWidth";
 
 export const BurgerMenu = () => {
+  const firstAnimation = useFirstAnimation();
+  const { active } = useWidth(1150);
   const { burgerMenu, toggleBurgerMenu, setSelectedLink, selectedLink } =
     useHeaderStore((state) => state);
   const handleClick = (linkId: string) => {
@@ -14,23 +18,23 @@ export const BurgerMenu = () => {
     <>
       <motion.div
         style={{ transform: burgerMenu ? "scale(1)" : "scale(0.75)" }}
-        viewport={{ once: true }}
+        viewport={{ margin: "-23px 0px -100px 0px" }}
         initial={{
           opacity: 0,
-          filter: "blur(10px)",
+          filter: `blur(10px)`,
         }}
         whileInView={{
           opacity: 1,
           filter: "blur(0px)",
           transition: {
-            duration: 0.5,
-            delay: 0.5,
+            duration: firstAnimation ? 0.5 : 0.3,
+            delay: firstAnimation ? 0.5 : 0.1,
           },
         }}
         id="nav-icon2"
-        className={`${
-          burgerMenu ? "open" : ""
-        } lg:hidden right-[15px] md:right-[30px] scale-75 sm:scale-100`}
+        className={`${burgerMenu ? "open" : ""} ${
+          active ? "" : "hidden"
+        } right-[15px] md:right-[30px] scale-75 sm:scale-100`}
         onClick={toggleBurgerMenu}
       >
         {Array.from({ length: 6 }).map((_, index) => (
@@ -57,7 +61,7 @@ export const BurgerMenu = () => {
             >
               <ul className="w-full h-full flex justify-center items-center flex-col gap-5">
                 {links.map((link, index) => (
-                  <Link key={link.text} to={link.text}>
+                  <Link key={link.text} to={link.text} offset={-118.5}>
                     <motion.li
                       initial={{ scale: 0.8, opacity: 0, filter: "blur(10px)" }}
                       animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}

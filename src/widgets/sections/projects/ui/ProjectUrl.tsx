@@ -1,17 +1,16 @@
 import { ReactNode } from "react";
-import AnimatedDiv from "../../../../shared/animatedDiv";
 import useWidth from "../../../../hooks/useWidth";
+import { motion } from "framer-motion";
+import { projectUrlConfig } from "../config/projectUrl";
 
 const ProjectUrl = ({ url, icon }: { url: string; icon: ReactNode }) => {
   const { active } = useWidth(936);
   return (
-    <AnimatedDiv
+    <motion.div
       className={`${
         active ? "sm:text-[20px] md:text-[22px]" : ""
       } text-accent text-[16px] md:text-[17px] lg:text-[20px]`}
-      delay={0.4}
-      x={-50}
-      isBlur
+      {...projectUrlConfig}
     >
       <a
         href={url}
@@ -20,7 +19,7 @@ const ProjectUrl = ({ url, icon }: { url: string; icon: ReactNode }) => {
       >
         {icon}
       </a>
-    </AnimatedDiv>
+    </motion.div>
   );
 };
 

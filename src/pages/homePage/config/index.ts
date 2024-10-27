@@ -119,8 +119,11 @@ export const projects = [
     id: 0,
     name: "LockKipper",
     url: "https://lockkipper.vercel.app/",
-    description:
-      "LockKipper is a password manager that allows users to store and manage their passwords. It supports managing various types of items such as logins, cards, and secure notes. While developing, I focused on implementing the user interfaces and core functionalities to ensure seamless item management and user experience.",
+    description: `LockKipper is a password manager that allows users to store and 
+            manage their passwords. It supports managing various types of items such as 
+            logins, cards, and secure notes. While developing, I focused on implementing 
+            the user interfaces and core functionalities to ensure seamless item management 
+            and user experience.`,
     photos: lockKipperPhotos,
     github: "https://github.com/TeDdi-pixel/lockkipper.git",
   },
@@ -140,8 +143,12 @@ export const projects = [
     id: 2,
     name: "Chicory Studio",
     url: "https://chicory-studio-project-hc88.vercel.app/",
-    description:
-      "Chicory Studio is а team project that provides an ability to search the most popular anime in different categories by using anime search API. My role included developing the homepage, anime pages, and user registration page. The project involved collaborative development and code reviews",
+    description: `
+          Chicory Studio is а team project that provides an ability to search the 
+          most popular anime in different categories by using anime search API.
+          My role included developing the homepage, anime pages, and user 
+          registration page. The project involved collaborative development and code reviews
+    `,
     photos: chicoryStudioPhotos,
     github: "https://github.com/Naezdnizu-shvabr/chicory-studio.git",
   },
@@ -149,8 +156,9 @@ export const projects = [
     id: 3,
     name: "Globe",
     url: "https://globe-s2zv.vercel.app/flights",
-    description:
-      "The Globe project aims to develop a travel website interface with features such as user registration, profile customization (including image handling), and bank card creation.",
+    description: `The Globe project aims to develop a travel website interface with 
+          features such as user registration, profile customization (including 
+          image handling), and bank card creation.`,
     photos: globePhotos,
     github: "https://github.com/TeDdi-pixel/globe.git",
   },
@@ -158,8 +166,8 @@ export const projects = [
     id: 4,
     name: "Gallery",
     url: "https://gallery-app-virid.vercel.app/",
-    description:
-      "The Gallery project focused on improving skills in API integration, creating a gallery for displaying and searching images by keywords.",
+    description: `The Gallery project focused on improving skills in API integration,
+          creating a gallery for displaying and searching images by keywords.`,
     photos: galleryPhotos,
     github: "https://github.com/TeDdi-pixel/gallery-app.git",
   },

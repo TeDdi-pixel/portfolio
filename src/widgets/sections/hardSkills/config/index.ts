@@ -1,10 +1,16 @@
-export const stackPhotoWrapperConfig = (delay: number) => {
+export const stackPhotoWrapperConfig = ({
+  delay,
+  active,
+}: {
+  delay: number;
+  active: boolean;
+}) => {
   return {
-    viewport:{margin:'-10px 0px -50px 0px', amount: 0.7},
+    viewport: { amount: 0.3 },
     initial: {
       opacity: 0.6,
       scale: 0.8,
-      filter: "blur(15px)",
+      filter: `blur(${active ? "0" : "10px"})`,
     },
     whileInView: {
       opacity: 1,

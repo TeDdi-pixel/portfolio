@@ -10,7 +10,7 @@ export const PopUpNavigation = () => {
     setSelectedLink(linkText);
   };
   return (
-    <div className="fixed top-2.5 left-1/2 -translate-x-1/2 z-[999]">
+    <div className="fixed top-2.5 left-1/2 -translate-x-1/2 z-[999] w-[598px]">
       <motion.div
         {...popUpNavigationConfig}
         className="bg-accent px-8 py-3 rounded-[20px]"
