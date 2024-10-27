@@ -4,18 +4,17 @@ import DefaultSection from "../../../../shared/section/DefaultSection";
 import AnimatedText from "../AnimatedText";
 import ReactEmojis from "@souhaildev/reactemojis";
 import { motion } from "framer-motion";
-import useFirstAnimation from "../../../../hooks/useFirstAnimation";
+
 export const SummarySection = () => {
   const { active } = useWidth(1296);
   const { active: active2 } = useWidth(500);
   const { active: active3 } = useWidth(767);
   const { active: active4 } = useWidth(353);
-  const firstAnimation = useFirstAnimation();
   return (
     <DefaultSection>
       <Element name="Summary" />
       <motion.h1
-        viewport={{ margin: "-10px 0px -100px 0px", amount: 0.5 }}
+        viewport={{ margin: "-10px 0px -100px 0px", amount: 0.5, once: true }}
         initial={{
           opacity: 0,
           x: -10,
@@ -27,8 +26,8 @@ export const SummarySection = () => {
           filter: "blur(0px)",
           scale: 1,
           transition: {
-            duration: firstAnimation ? 0.8 : 0.3,
-            delay: firstAnimation ? 0.4 : 0,
+            duration: 0.5,
+            delay: 0.2,
           },
         }}
         className={`flex gap-7 items-center text-accent text-[80px] sm:text-[100px] mb-[15px] sm:mb-[15px] font-bold 
@@ -65,6 +64,7 @@ export const SummarySection = () => {
         />
         <motion.div
           className="flex-shrink-0 max-w-[280px] max-h-[280px] w-full h-full  xl:max-w-[380px] xl:max-h-[380px]  rounded-full overflow-hidden relative"
+          viewport={{once: true}}
           initial={{
             opacity: 0,
             scale: 0.95,
@@ -75,7 +75,7 @@ export const SummarySection = () => {
             opacity: 1,
             filter: "blur(0px)",
             transition: {
-              duration: firstAnimation ? 0.6 : 0.4,
+              duration:  0.6,
               delay: 0.2,
             },
           }}

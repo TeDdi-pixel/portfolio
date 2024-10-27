@@ -12,7 +12,7 @@ export const EducationSection = () => {
         <Title title="Education" emoji="🤓" />
         <motion.div
           className="text-texture text-[24px] sm:text-[28px] lg:text-[32px] mb-2"
-          viewport={{ margin: "-35px 0px -35px 0px" }}
+          viewport={{ margin: "-35px 0px -35px 0px", once: true }}
           initial={{
             opacity: 0,
             scale: 0.85,

@@ -2,20 +2,18 @@ import { links } from "../config";
 import { Link } from "react-scroll";
 import { useHeaderStore } from "../store";
 import { motion } from "framer-motion";
-import useFirstAnimation from "../../../hooks/useFirstAnimation";
 import useWidth from "../../../hooks/useWidth";
 
 export const HeaderNavigation = () => {
   const { setSelectedLink } = useHeaderStore((state) => state);
-  const firstAnimation = useFirstAnimation();
   const { active } = useWidth(1150);
   return (
     <nav className={`${active ? "hidden" : "flex items-center"} `}>
       <motion.div
-        viewport={{ margin: "-23px 0px -100px 0px" }}
+        viewport={{ margin: "-23px 0px -100px 0px", once: true }}
         initial={{
           opacity: 0,
-          x: firstAnimation ? 50 : 20,
+          x: 20,
           filter: `blur(10px)`,
         }}
         whileInView={{
@@ -24,8 +22,8 @@ export const HeaderNavigation = () => {
           x: 0,
           y: 0,
           transition: {
-            duration: firstAnimation ? 0.5 : 0.3,
-            delay: firstAnimation ? 0.5 : 0.1,
+            duration:  0.3,
+            delay:  0.1,
           },
         }}
       >

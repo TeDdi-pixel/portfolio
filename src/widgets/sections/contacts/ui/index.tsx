@@ -24,7 +24,7 @@ export const ContactsSection = () => {
             <div key={contact.id}>
               <motion.div
                 className={`text-texture text-[24px] sm:text-[28px] lg:text-[32px] mb-2`}
-                viewport={{ margin: "-35px 0px -35px 0px"}}
+                viewport={{ margin: "-35px 0px -35px 0px", once: true }}
                 initial={{
                   opacity: 0,
                   scale: 0.85,
@@ -47,7 +47,7 @@ export const ContactsSection = () => {
               </motion.div>
               {contact.link && (
                 <motion.div
-                  viewport={{ margin: "-25px 0px -25px 0px" }}
+                  viewport={{ margin: "-25px 0px -25px 0px", once: true }}
                   initial={{
                     opacity: 0,
                     scale: 0.85,
@@ -77,7 +77,7 @@ export const ContactsSection = () => {
               )}
               {contact.text && (
                 <motion.div
-                  viewport={{ margin: "-25px 0px -25px 0px" }}
+                  viewport={{ margin: "-25px 0px -25px 0px", once: true }}
                   initial={{
                     opacity: 0,
                     scale: 0.85,

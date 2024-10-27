@@ -1,5 +1,5 @@
 export const projectNameConfig = {
-  viewport: { margin: "-35px 0px -35px 0px" },
+  viewport: { margin: "-35px 0px -35px 0px", once: true },
   initial: {
     opacity: 0,
     scale: 0.85,

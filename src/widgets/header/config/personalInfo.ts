@@ -1,20 +1,18 @@
-export const personalInfoConfig = (firstAnimation: boolean) => {
-  return {
-    viewport: { margin: "-23px 0px -100px 0px" },
-    initial: {
-      opacity: 0,
-      x: firstAnimation ? -50 : -20,
-      filter: `blur(10px)`,
+export const personalInfoConfig = {
+  viewport: { margin: "-23px 0px -100px 0px", once: true },
+  initial: {
+    opacity: 0,
+    x: -20,
+    filter: `blur(10px)`,
+  },
+  whileInView: {
+    opacity: 1,
+    filter: "blur(0px)",
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      delay: 0.1,
     },
-    whileInView: {
-      opacity: 1,
-      filter: "blur(0px)",
-      x: 0,
-      y: 0,
-      transition: {
-        duration: firstAnimation ? 0.5 : 0.3,
-        delay: firstAnimation ? 0.5 : 0.1,
-      },
-    },
-  };
+  },
 };

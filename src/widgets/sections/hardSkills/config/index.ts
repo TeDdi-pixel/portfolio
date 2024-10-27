@@ -6,7 +6,7 @@ export const stackPhotoWrapperConfig = ({
   active: boolean;
 }) => {
   return {
-    viewport: { amount: 0.3 },
+    viewport: { amount: 0.3, once: true },
     initial: {
       opacity: 0.6,
       scale: 0.8,

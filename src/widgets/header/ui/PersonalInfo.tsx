@@ -1,15 +1,13 @@
 import { motion } from "framer-motion";
 import { personalInfoConfig } from "../config/personalInfo";
-import useFirstAnimation from "../../../hooks/useFirstAnimation";
 import useWidth from "../../../hooks/useWidth";
 
 const PersonalInfo = () => {
-  const firstAnimation = useFirstAnimation();
   const { active } = useWidth(494);
 
   return (
     <motion.div
-      {...personalInfoConfig(firstAnimation)}
+      {...personalInfoConfig}
       className="flex items-center flex-wrap justify-start gap-2.5"
     >
       <span className="block w-7 h-5 bg-texture rounded-full animate-spin-slow relative"></span>

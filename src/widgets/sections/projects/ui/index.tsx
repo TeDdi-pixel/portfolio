@@ -53,16 +53,16 @@ export const ProjectsSection = () => {
               <ProjectDescription description={project.description} />
             </div>
             <motion.div
-            viewport={{amount:0.1}}
+              viewport={{ amount: 0.1, once: true }}
               initial={{
                 opacity: 0.5,
                 scale: 0.95,
-                y: 30,
-                filter: `blur(10px)`,
+                y: 20,
+                filter: `blur(5px)`,
               }}
               whileInView={{
                 scale: 1,
-                y:0,
+                y: 0,
                 opacity: 1,
                 filter: "blur(0px)",
                 transition: {

@@ -1,5 +1,5 @@
 export const projectUrlConfig = {
-viewport: { margin: "-25px 0px -25px 0px" },
+viewport: { margin: "-25px 0px -25px 0px", once: true },
   initial: {
     opacity: 0,
     x: -10,

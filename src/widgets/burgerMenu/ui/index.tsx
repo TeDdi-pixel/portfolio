@@ -18,7 +18,7 @@ export const BurgerMenu = () => {
     <>
       <motion.div
         style={{ transform: burgerMenu ? "scale(1)" : "scale(0.75)" }}
-        viewport={{ margin: "-23px 0px -100px 0px" }}
+        viewport={{ margin: "-23px 0px -100px 0px",once:true }}
         initial={{
           opacity: 0,
           filter: `blur(10px)`,

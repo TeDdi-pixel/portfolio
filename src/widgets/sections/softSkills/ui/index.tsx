@@ -5,17 +5,15 @@ import { softSkills } from "../config";
 import { motion } from "framer-motion";
 import { stackPhotoWrapperConfig } from "../../hardSkills/config";
 import useWidth from "../../../../hooks/useWidth";
-import useFirstAnimation from "../../../../hooks/useFirstAnimation";
 
 export const SoftSkillsSection = () => {
   const { active } = useWidth(461);
   const { active: active2 } = useWidth(1232);
 
-  const firstAnimation = useFirstAnimation();
   const handleDelay = (photoId: number): { delay: number; active: boolean } => {
     if (photoId === 0) return { delay: 0.05, active };
     if (photoId === 1) return { delay: 0.06, active };
-    return { delay: photoId * (firstAnimation ? 0.03 : 0.01), active };
+    return { delay: photoId * 0.03 , active };
   };
 
   return (

@@ -4,16 +4,15 @@ import { Title } from "../../../../entities/sectionTitle";
 import { stackPhotos } from "../../../../pages/homePage/config";
 import { motion } from "framer-motion";
 import { stackPhotoWrapperConfig } from "../config";
-import useFirstAnimation from "../../../../hooks/useFirstAnimation";
 export const StackSection = () => {
   const { active } = useWidth(500);
   const { active: active2 } = useWidth(1386);
   const { active: active3 } = useWidth(461);
-  const firstAnimation = useFirstAnimation();
+
   const handleDelay = (photoId: number): { delay: number; active: boolean } => {
     if (photoId === 0) return { delay: 0.05, active: active3 };
     if (photoId === 1) return { delay: 0.06, active: active3 };
-    return { delay: photoId * (firstAnimation ? 0.03 : 0.01), active: active3 };
+    return { delay: photoId * 0.03, active: active3 };
   };
 
   return (
