@@ -1,13 +1,13 @@
 import { Element } from "react-scroll";
-import Section from "../../../../shared/section";
 import { Title } from "../../../../entities/sectionTitle";
 import AnimatedDiv from "../../../../shared/animatedDiv";
+import DefaultSection from "../../../../shared/section/DefaultSection";
 
 export const EducationSection = () => {
   return (
-    <Section>
+    <DefaultSection>
       <Element name="Education" />
-      <Title title="Education" />
+      <Title title="Education" emoji="🤓"/>
       <AnimatedDiv
         className={`text-texture text-[24px] sm:text-[28px] lg:text-[32px] mb-2`}
         delay={0.3}
@@ -35,6 +35,6 @@ export const EducationSection = () => {
       >
         Practice in DataArt. Date of practice: 07.02 – 20.02.2022{" "}
       </AnimatedDiv>
-    </Section>
+    </DefaultSection>
   );
 };

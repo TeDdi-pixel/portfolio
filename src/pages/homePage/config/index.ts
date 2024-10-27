@@ -15,7 +15,7 @@ export const stackPhotos = [
   { id: 9, alt: "redux_logo", path: "./redux_logo.webp", tooltip: "Redux" },
   {
     id: 10,
-    alt: "firebase_logo",
+    alt: "Firebase_logo",
     path: "./firebase_logo.webp",
     tooltip: "Firebase",
   },
@@ -33,19 +33,19 @@ export const stackPhotos = [
   },
   {
     id: 13,
-    alt: "git_logo",
+    alt: "Git_logo",
     path: "./git_logo.webp",
     tooltip: "Git",
   },
   {
     id: 14,
-    alt: "zustand_logo",
+    alt: "Zustand_logo",
     path: "./zustand_logo.webp",
-    tooltip: "zustand",
+    tooltip: "Zustand",
   },
   {
     id: 15,
-    alt: "github_logo",
+    alt: "Github_logo",
     path: "./github_logo.webp",
     tooltip: "GitHub",
   },
@@ -122,6 +122,7 @@ export const projects = [
     description:
       "LockKipper is a password manager that allows users to store and manage their passwords. It supports managing various types of items such as logins, cards, and secure notes. While developing, I focused on implementing the user interfaces and core functionalities to ensure seamless item management and user experience.",
     photos: lockKipperPhotos,
+    github: "https://github.com/TeDdi-pixel/lockkipper.git",
   },
   {
     id: 1,
@@ -133,6 +134,7 @@ export const projects = [
             creating the user interface and enabling core functionalities for
             ordering flowers.`,
     photos: flowerShopPhotos,
+    github: "https://github.com/TeDdi-pixel/flowerShop.git",
   },
   {
     id: 2,
@@ -141,6 +143,7 @@ export const projects = [
     description:
       "Chicory Studio is а team project that provides an ability to search the most popular anime in different categories by using anime search API. My role included developing the homepage, anime pages, and user registration page. The project involved collaborative development and code reviews",
     photos: chicoryStudioPhotos,
+    github: "https://github.com/Naezdnizu-shvabr/chicory-studio.git",
   },
   {
     id: 3,
@@ -149,6 +152,7 @@ export const projects = [
     description:
       "The Globe project aims to develop a travel website interface with features such as user registration, profile customization (including image handling), and bank card creation.",
     photos: globePhotos,
+    github: "https://github.com/TeDdi-pixel/globe.git",
   },
   {
     id: 4,
@@ -157,5 +161,6 @@ export const projects = [
     description:
       "The Gallery project focused on improving skills in API integration, creating a gallery for displaying and searching images by keywords.",
     photos: galleryPhotos,
+    github: "https://github.com/TeDdi-pixel/gallery-app.git",
   },
 ];

@@ -8,7 +8,7 @@ export const ContactsSection = () => {
   const { active } = useWidth(500);
 
   return (
-    <div className="bg-background2 py-[87.5px] md:py-[143px]">
+    <div className="bg-purple py-[87.5px] md:py-[143px]">
       <section
         className={`mx-auto my-0 max-w-[1400px] relative w-full scroll-pt-[45.5px]  ${
           active ? "px-[15px]" : "px-[34.5px]"
@@ -17,7 +17,7 @@ export const ContactsSection = () => {
         <Element name="Contacts" />
 
         <div className=" px-[15px] md:px-[30px] lg:px-[50px] ">
-          <Title title="Contacts" />
+          <Title title="Contacts" emoji="😏"/>
           {contacts.map((contact) => (
             <div key={contact.id}>
               <AnimatedDiv

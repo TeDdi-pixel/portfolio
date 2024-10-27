@@ -68,6 +68,7 @@
   transform: scale(1.1);
   opacity: 1;
 }
+
 #root {
   overflow-x: hidden;
 }
@@ -84,14 +85,14 @@
     --black: 40, 5%, 11%;
     --white: 39, 85%, 95%;
     --green: 177, 70%, 41%;
-    --purple: 265, 79%, 63%;
+    --purple: 265, 29%, 18%;
     --pink: 4, 81%, 59%;
     --orange: 23, 87%, 55%;
     --yellow: 49, 91%, 52%;
 
     --accent: var(--white);
     --background: 213, 32%, 11%;
-    --background2: 213, 39%, 12%;
+    --background2: 215, 38%, 18%;
     --foreground: 0, 0%, 90%;
     --card: 0 0% 100%;
     --text: 0 0% 40%;

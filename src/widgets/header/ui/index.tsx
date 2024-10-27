@@ -14,7 +14,7 @@ export const Header = () => {
         active
           ? "fixed top-0 left-0 px-[15px] z-[200] bg-background py-[20px] shadow-custom"
           : "relative pt-[30px]"
-      } flex justify-between gap-6 items-center`}
+      } flex justify-between gap-6 items-center max-w-[1400px] w-full`}
     >
       <AnimatedDiv
         isBlur

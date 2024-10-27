@@ -1,4 +1,4 @@
-import { FaLinkedin, FaTelegram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 
 export const contacts = [
   {
@@ -51,6 +51,25 @@ export const contacts = [
         className="underline decoration-texture"
       >
         https://www.linkedin.com/in/vladislav-valiuha-546327231/
+      </a>
+    ),
+  },
+  {
+    id: 4,
+    title: (
+      <div className="flex items-center gap-5">
+        GitHub{" "}
+        <span>
+          <FaGithub />
+        </span>
+      </div>
+    ),
+    text: (
+      <a
+        href="https://github.com/TeDdi-pixel"
+        className="underline decoration-texture"
+      >
+        https://github.com/TeDdi-pixel
       </a>
     ),
   },
