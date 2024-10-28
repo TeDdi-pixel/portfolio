@@ -19,7 +19,7 @@ export const ContactsSection = () => {
         <Element name="Contacts" />
 
         <div className="px-[15px] md:px-[30px] lg:px-[50px]">
-          <Title title="Contacts" emoji="😏" />
+          <Title title="Contacts" emoji="📞" />
           {contacts.map((contact) => (
             <div key={contact.id}>
               <ContactTitle
