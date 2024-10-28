@@ -1,5 +1,5 @@
-import React from 'react'
 import useWidth from '../../hooks/useWidth';
+import ReactEmojis from "@souhaildev/reactemojis";
 
 const Emoji = () => {
     const { active } = useWidth(767);
