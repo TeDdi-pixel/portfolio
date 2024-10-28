@@ -1,19 +1,20 @@
 export const popUpNavigationConfig = {
-  viewport: { once: true },
   initial: {
     opacity: 0,
-    x: 0,
     y: -10,
-    filter: "blur(2px)",
+    x: -30,
+    filter: "blur(1px)",
+    scale: 0.9,
   },
-  whileInView: {
+  animate: {
     opacity: 1,
     filter: "blur(0px)",
-    x: 0,
     y: 0,
+    x: 0,
+    scale: 1,
     transition: {
-      duration: 0.3,
-      delay: 0.1,
+      duration: 0.2,
     },
   },
+  exit: { opacity: 0, y: -10, x: -30, filter: "blur(5px)", scale: 0.9 },
 };

@@ -21,7 +21,6 @@ export const contacts = [
         </span>
       </div>
     ),
-    link: "https://t.me/whyME_3",
     linkText: "https://t.me/whyME_3",
   },
   {
@@ -34,7 +33,6 @@ export const contacts = [
         </span>
       </div>
     ),
-    link: "https://www.linkedin.com/in/vladislav-valiuha-546327231/",
     linkText: "https://www.linkedin.com/in/vladislav-valiuha-546327231/",
   },
   {
@@ -47,7 +45,6 @@ export const contacts = [
         </span>
       </div>
     ),
-    link: "https://github.com/TeDdi-pixel",
     linkText: "https://github.com/TeDdi-pixel",
   },
 ];

@@ -6,39 +6,29 @@ const useWidth = (selectedWidth?: number) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleResize = useCallback(() => {
-    setWidth(window.innerWidth);
-    if(!selectedWidth) return
-    if (width <= selectedWidth) {
-      setActive(true);
-    } else setActive(false);
-  }, [selectedWidth, width]);
+    const currentWidth = window.innerWidth;
+    setWidth(currentWidth);
+    if (selectedWidth) {
+      setActive(currentWidth <= selectedWidth);
+    }
+  }, [selectedWidth]);
 
-  useEffect(() => {
-    handleResize();
-  }, [handleResize]);
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [handleResize]);
-
-  const callBackScroll = useCallback(() => {
-    const position = window.scrollY;
-    setScrollPosition(position);
+  const handleScroll = useCallback(() => {
+    setScrollPosition(window.scrollY);
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", callBackScroll, { passive: true });
     handleResize();
-    return () => {
-      window.removeEventListener("scroll", callBackScroll);
-    };
-  }, [handleResize, callBackScroll]);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-  return { width, active,scrollPosition };
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleResize, handleScroll]);
+
+  return { width, active, scrollPosition };
 };
 
 export default useWidth;

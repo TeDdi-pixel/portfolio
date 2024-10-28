@@ -1,20 +1,17 @@
 import { Link } from "react-scroll";
 import { links } from "../../header/config";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useHeaderStore } from "../../header/store";
 import { popUpNavigationConfig } from "../config";
 
 export const PopUpNavigation = () => {
   const { selectedLink, setSelectedLink } = useHeaderStore((state) => state);
-  const handleLinkClick = (linkText: string) => {
-    setSelectedLink(linkText);
-  };
   return (
-    <div className="fixed top-2.5 left-1/2 -translate-x-1/2 z-[999] w-[598px]">
-      <motion.div
-        {...popUpNavigationConfig}
-        className="bg-accent px-8 py-3 rounded-[20px]"
-      >
+    <m.div
+      {...popUpNavigationConfig}
+      className="fixed top-2.5 left-1/2 z-[999] w-[598px]"
+    >
+      <div className="bg-accent px-8 py-3 rounded-[20px] -translate-x-1/2">
         <ul className="flex items-center select-none gap-5">
           {links.map((link) => (
             <Link
@@ -24,13 +21,13 @@ export const PopUpNavigation = () => {
               duration={500}
               offset={-118.5}
               className="cursor-pointer"
-              onClick={() => handleLinkClick(link.text)}
+              onClick={() => setSelectedLink(link.text)}
             >
-              <motion.li className="relative cursor-pointer pb-1 text-[16px]">
+              <li className="relative cursor-pointer pb-1 text-[16px]">
                 {link.text}
 
                 {selectedLink === link.text && (
-                  <motion.div
+                  <m.div
                     initial={{ opacity: 1, height: "3px" }}
                     animate={{ opacity: 1, height: "3px" }}
                     className="absolute left-0 right-0 bg-texture bottom-0 transition-opacity rounded-full"
@@ -42,11 +39,11 @@ export const PopUpNavigation = () => {
                     }}
                   />
                 )}
-              </motion.li>
+              </li>
             </Link>
           ))}
         </ul>
-      </motion.div>
-    </div>
+      </div>
+    </m.div>
   );
 };

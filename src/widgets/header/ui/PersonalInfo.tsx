@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { personalInfoConfig } from "../config/personalInfo";
 import useWidth from "../../../hooks/useWidth";
 
@@ -6,14 +6,14 @@ const PersonalInfo = () => {
   const { active } = useWidth(494);
 
   return (
-    <motion.div
+    <m.div
       {...personalInfoConfig}
       className="flex items-center flex-wrap justify-start gap-2.5"
     >
       <span className="block w-7 h-5 bg-texture rounded-full animate-spin-slow relative"></span>
 
       <div className="font-bold text-[22px] text-accent inline-block">
-        Vladislav Valiuha
+        Vladislav Valuyga
       </div>
 
       <div
@@ -23,7 +23,7 @@ const PersonalInfo = () => {
       >
         Front-end developer
       </div>
-    </motion.div>
+    </m.div>
   );
 };
 

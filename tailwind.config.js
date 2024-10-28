@@ -13,10 +13,18 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-    breakpoints: {
-      custom: "1060px",
-    },
     extend: {
+      screens: {
+        bp353: "353px",
+        bp461: "461px",
+        bp500: "500px",
+        bp632: "632px",
+        bp936: "936px",
+        bp1050: "1050px",
+        bp1232: "1232px",
+        bp1296: "1296px",
+        bp1386: "1386px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

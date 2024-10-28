@@ -1,15 +1,11 @@
 import { ReactNode } from "react";
-import useWidth from "../../../../hooks/useWidth";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { projectUrlConfig } from "../config/projectUrl";
 
 const ProjectUrl = ({ url, icon }: { url: string; icon: ReactNode }) => {
-  const { active } = useWidth(936);
   return (
-    <motion.div
-      className={`${
-        active ? "sm:text-[20px] md:text-[22px]" : ""
-      } text-accent text-[16px] md:text-[17px] lg:text-[20px]`}
+    <m.div
+      className="text-accent hover:text-texture transition-colors text-[16px] sm:text-[20px] md:text-[22px]"
       {...projectUrlConfig}
     >
       <a
@@ -19,7 +15,7 @@ const ProjectUrl = ({ url, icon }: { url: string; icon: ReactNode }) => {
       >
         {icon}
       </a>
-    </motion.div>
+    </m.div>
   );
 };
 
