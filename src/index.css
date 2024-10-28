@@ -8,20 +8,20 @@
 
 @layer utilities {
   .bg-react {
-    background-image: url("./react_bg.webp");
+    background-image: url("../public/react_bg.webp");
     background-repeat: repeat;
     background-size: 100px 100px;
     background-position: center;
   }
 
   .bg-chat {
-    background-image: url("./chat.webp");
+    background-image: url("../public/chat.webp");
     background-repeat: repeat;
     background-size: 100px 100px;
     background-position: center;
   }
   .bg-contacts {
-    background-image: url("./notification.webp");
+    background-image: url("../public/notification.webp");
     background-repeat: repeat;
     background-size: 100px 100px;
     background-position: center;
