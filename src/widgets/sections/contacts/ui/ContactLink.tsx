@@ -13,7 +13,7 @@ const ContactLink = ({ contactId, contactLink }: Props) => {
       {...contactLinkConfig(contactId)}
     >
       {contactLink && (
-        <a href={contactLink} className="underline decoration-texture">
+        <a href={contactLink} className="hover:underline hover:decoration-texture">
           {contactLink}
         </a>
       )}
