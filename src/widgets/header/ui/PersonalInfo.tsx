@@ -13,7 +13,7 @@ const PersonalInfo = () => {
       <span className="block w-7 h-5 bg-texture rounded-full animate-spin-slow relative"></span>
 
       <div className="font-bold text-[22px] text-accent inline-block">
-        Vladislav Valuyga
+        Valuga Vladislav
       </div>
 
       <div
