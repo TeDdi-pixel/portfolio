@@ -26,6 +26,7 @@ module.exports = {
         bp1386: "1386px",
       },
       colors: {
+        darkGreen: "hsl(var(--dark-green))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,7 +76,24 @@ module.exports = {
       boxShadow: {
         custom: "rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;",
       },
+      keyframes: {
+        scrollBackground: {
+          "0%": { backgroundPosition: "0 0" },
+          "100%": { backgroundPosition: "100% 100%" },
+        },
+        scrollBackground2: {
+          "0%": { backgroundPosition: "0 0" },
+          "100%": { backgroundPosition: "100% -100%" },
+        },
+        scrollBackground3: {
+          "0%": { backgroundPosition: "0 0" },
+          "100%": { backgroundPosition: "-100% 100%" },
+        },
+      },
       animation: {
+        scrollBackground: "scrollBackground 80s linear infinite",
+        scrollBackground2: "scrollBackground2 80s linear infinite",
+        scrollBackground3: "scrollBackground3 80s linear infinite",
         "spin-slow": "spin 3s linear infinite",
         "spin-fast": "spin 0.5s linear infinite",
       },

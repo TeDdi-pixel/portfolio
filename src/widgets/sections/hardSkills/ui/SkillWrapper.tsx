@@ -19,7 +19,7 @@ const SkillWrapper = ({ children, photoId }: Props) => {
 
   return (
     <m.div
-      className="flex items-center gap-[10px] bg-purple px-[15px] md:px-[20px] py-[10px] rounded-md w-full bp461:w-auto justify-center bp461:justify-start"
+      className="bg-texture flex items-center gap-[10px] px-[15px] md:px-[20px] py-[10px] rounded-md w-full bp461:w-auto justify-center bp461:justify-start"
       id={`photo-${photoId}`}
       {...stackPhotoWrapperConfig(handleDelay(photoId))}
     >

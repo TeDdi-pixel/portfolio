@@ -6,15 +6,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .bg-react {
+    background-image: url("./react_bg.webp");
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    background-position: center;
+  }
+
+  .bg-chat {
+    background-image: url("./chat.webp");
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    background-position: center;
+  }
+  .bg-contacts {
+    background-image: url("./notification.webp");
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    background-position: center;
+  }
+}
+
 .swiper-pagination-progressbar-fill {
   background-color: hsl(var(--green)) !important;
   border-radius: 99px !important;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   position: absolute !important;
   top: auto !important;
-  bottom: 20px !important; 
+  bottom: 20px !important;
 }
 
 .swiper-button-next {
@@ -85,14 +108,15 @@
     --black: 40, 5%, 11%;
     --white: 39, 85%, 95%;
     --green: 177, 70%, 41%;
-    --purple: 265, 29%, 18%;
+    --purple: 265, 34%, 23%;
     --pink: 4, 81%, 59%;
     --orange: 23, 87%, 55%;
     --yellow: 49, 91%, 52%;
 
+    --dark-green: 177, 70%, 30%;
     --accent: var(--white);
     --background: 213, 32%, 11%;
-    --background2: 215, 38%, 18%;
+    --background2: 214, 52%, 20%;
     --foreground: 0, 0%, 90%;
     --card: 0 0% 100%;
     --text: 0 0% 40%;

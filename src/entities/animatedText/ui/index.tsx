@@ -8,13 +8,13 @@ export const AnimatedText = ({ text }: { text: string }) => {
     .map((line) => line.trim());
 
   return (
-    <m.div className="text-accent text-[16px] md:text-[18px] xl:text-[23px] max-w-[778px] break-words">
+    <div className="text-accent text-[16px] md:text-[18px] xl:text-[23px] max-w-[778px] break-words">
       {lines.map((line, index) => (
         <m.span key={index} {...animatedTextConfig(index)}>
           {line}{" "}
         </m.span>
       ))}
-    </m.div>
+    </div>
   );
 };
 

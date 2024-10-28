@@ -10,7 +10,7 @@ export const ContactsSection = () => {
   const { active } = useWidth(1023);
   return (
     <div
-      className="py-[87.5px] md:py-[143px] rounded-3xl"
+      className="py-[87.5px] md:py-[143px] rounded-3xl w-full h-auto bg-contacts animate-scrollBackground2"
       style={{ minHeight: `${active ? "calc(100vh - 53.75px)" : "100vh"}` }}
     >
       <section

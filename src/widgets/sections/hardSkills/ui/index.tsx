@@ -7,7 +7,7 @@ import SkillPhoto from "./SkillPhoto";
 
 export const HardSkillsSection = () => {
   return (
-    <BgWrapper bgColor="bg-background" py>
+    <BgWrapper bgColor="bg-background" py animation>
       <section className="mx-auto my-0 max-w-[1400px] relative w-full scroll-pt-[45.5px] px-[15px] bp500:px-[34.5px]">
         <Element name="Hard skills" />
         <div className=" px-[15px] md:px-[30px] lg:px-[50px] ">
