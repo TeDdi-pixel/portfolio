@@ -18,12 +18,18 @@ module.exports = {
         bp353: "353px",
         bp461: "461px",
         bp500: "500px",
+        bp523: "523px",
+        bp580: "580px",
         bp632: "632px",
+        bp710: "710px",
+        bp900: "900px",
         bp936: "936px",
         bp1050: "1050px",
         bp1232: "1232px",
         bp1296: "1296px",
         bp1386: "1386px",
+        bp1373: "1373px",
+        bp1480: "1480px",
       },
       colors: {
         darkGreen: "hsl(var(--dark-green))",
@@ -67,6 +73,12 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        "gradient-purple":
+          "radial-gradient(100% 316.05% at 0% 0%, #37274F 30%, #7E59B5 100%)",
+        "gradient-blue":
+          "linear-gradient(203.16deg, #182F4E 25.5%, #284E81 69.5%, #376CB4 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",

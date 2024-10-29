@@ -9,7 +9,7 @@ type Props = {
 const ContactLink = ({ contactId, contactLink }: Props) => {
   return (
     <m.div
-      className="text-accent text-[16px] md:text-[18px] lg:text-[23px] max-w-[778px] break-words mb-[15px]"
+      className="text-accent-foreground text-[16px] md:text-[18px] lg:text-[23px] max-w-[778px] break-words mb-[15px]"
       {...contactLinkConfig(contactId)}
     >
       {contactLink && (

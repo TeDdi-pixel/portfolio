@@ -19,7 +19,7 @@ export const PopUpNavigation = () => {
               to={link.text}
               smooth={true}
               duration={500}
-              offset={-118.5}
+              offset={link.text === "Summary" ? -300 : -118.5 }
               className="cursor-pointer"
               onClick={() => setSelectedLink(link.text)}
             >

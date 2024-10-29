@@ -7,7 +7,7 @@ export const animatedTextConfig = (index: number) => {
       scale: 0.5,
     },
     whileInView: {
-      scale: 1,
+      scale: 0.8,
       opacity: 1,
       filter: "blur(0px)",
       transition: {

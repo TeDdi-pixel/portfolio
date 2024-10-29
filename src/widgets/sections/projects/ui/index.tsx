@@ -22,7 +22,7 @@ type Project = {
 
 export const ProjectsSection = () => {
   return (
-    <div className="bg-background2 rounded-3xl">
+    <div className="bg-gradient-blue rounded-3xl">
       <div className="max-w-[1400px] mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] pt-[87.5px] md:pt-[143px]">
         <DefaultSection>
           <Element name="Projects" />
@@ -31,7 +31,7 @@ export const ProjectsSection = () => {
           {projects.map((project: Project) => (
             <div
               key={project.id}
-              className={`flex justify-between flex-col bp936:flex-row gap-8 bp936:gap-16 lg:gap-22 mb-[85px] bp936:mb-[175px] last:mb-0`}
+              className={`flex justify-between flex-col bp936:flex-row gap-8 bp936:gap-16 lg:gap-22 mb-[85px] bp936:mb-[90px] last:mb-0`}
             >
               <div className="flex flex-col">
                 <div className="flex gap-[20px] items-center mb-4">

@@ -25,7 +25,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <div className="flex items-center flex-col mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] bg-purple rounded-b-3xl min-h-[100vh]">
+      <div className="flex items-center flex-col justify-between w-full mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] bg-gradient-purple rounded-b-3xl min-h-[100vh]">
         <Header />
         <SummarySection />
       </div>

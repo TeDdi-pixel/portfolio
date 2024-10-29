@@ -8,7 +8,7 @@ import { AnimatedText } from "../../../../entities/animatedText";
 
 export const EducationSection = () => {
   return (
-    <BgWrapper bgColor="bg-purple" rounded>
+    <BgWrapper bgColor="bg-gradient-purple" rounded>
       <div className="max-w-[1400px] mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] pt-[87.5px] md:pt-[143px]">
         <DefaultSection>
           <Element name="Education" />
@@ -20,7 +20,7 @@ export const EducationSection = () => {
         Technical University, earning a bachelor's degree.`}
           />
 
-          <AnimatedText text="Practice in DataArt. Date of practice: 07.02 – 20.02.2022" />
+          <AnimatedText text="Practice in DataArt. Date of practice: 07.02 – 20.02 of 2022-th" />
         </DefaultSection>
       </div>
     </BgWrapper>
