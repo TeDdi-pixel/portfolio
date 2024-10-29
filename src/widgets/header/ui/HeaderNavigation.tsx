@@ -11,8 +11,18 @@ export const HeaderNavigation = () => {
   return (
     <nav className="hidden bp1050:flex items-center">
       <ul className="flex items-center gap-5">
-        {links.map((link) => (
-          <li
+        {links.map((link,linkIndex) => (
+          <m.li
+            initial={{ opacity: 0, x: 30, filter: "blur(5px)" }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              filter: "blur(0px)",
+              transition: {
+                duration: 0.4,
+                delay: 0.1 * linkIndex,
+              },
+            }}
             key={link.text}
             className={`cursor-pointer text-accent text-[16px] hover:text-texture transition-colors ${
               link.text === "Summary" ? "hidden" : "block"
@@ -54,7 +64,7 @@ export const HeaderNavigation = () => {
                 )
               )}
             </Link>
-          </li>
+          </m.li>
         ))}
       </ul>
     </nav>
