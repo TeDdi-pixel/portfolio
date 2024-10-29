@@ -102,7 +102,22 @@
   min-height: 2000px;
   background-color: hsl(213, 32%, 11%);
 }
+.bg-gradient-animated {
+  background: linear-gradient(90deg, #1FB2AA, #F1F5F9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientFlow 0.7s ease-in-out forwards;
+}
 
+@keyframes gradientFlow {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 @layer base {
   :root {
     --black: 40, 5%, 11%;
