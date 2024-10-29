@@ -15,7 +15,7 @@ const HandDown = () => {
         onClick={() => setSelectedLink("Hard skills")}
       >
         <img
-          src="./public/pointing-down.webp"
+          src="./pointing-down.webp"
           alt="hand down"
           className="object-contain max-w-[110px] max-h-[80px] animate-bounce"
         />
