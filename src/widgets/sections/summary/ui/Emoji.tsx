@@ -7,7 +7,7 @@ const Emoji = () => {
   return (
     <>
       {active ? (
-        <span className="text-[45px] bp353:text-[65px]">✨</span>
+        <span className="text-[45px] bp395:text-[65px]">✨</span>
       ) : (
         <ReactEmojis
           emoji="✨"
