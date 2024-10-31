@@ -7,7 +7,7 @@ export const TabletBurgerMenu = () => {
   const { burgerMenu, burgerLinkTaped, popUpNav } = useHeaderStore(
     (state) => state
   );
-  const { active } = useWidth(767);
+  const { active } = useWidth(632);
 
   return (
     <m.div
