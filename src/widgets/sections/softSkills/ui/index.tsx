@@ -1,16 +1,16 @@
 import DefaultSection from "../../../../shared/section/DefaultSection";
 import { softSkills } from "../config";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import SkillWrapper from "../../../../shared/SkillWrapper";
 import useSectionInView from "../../../../hooks/useSectionInView";
 import useWidth from "../../../../hooks/useWidth";
-import { Reorder } from "framer-motion";
+import { m } from "framer-motion";
+import { stackPhotoWrapperConfig } from "../../hardSkills/config";
 
 export const SoftSkillsSection = () => {
   const constraintsRef = useRef<HTMLDivElement>(null);
   const handleSectionId = useSectionInView();
   const { active } = useWidth(460);
-  const [items, setItems] = useState(softSkills);
 
   return (
     <div
@@ -20,12 +20,12 @@ export const SoftSkillsSection = () => {
     >
       <div className="max-w-[1400px] mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] pt-[87.5px] md:pt-[143px]">
         <DefaultSection title="Soft skills" emoji="⭐">
-          {!active ? (
-            <div
-              ref={constraintsRef}
-              className="flex gap-4 md:gap-[20px] items-center justify-center bp1232:justify-start flex-wrap"
-            >
-              {softSkills.map((skill) => (
+          <div
+            ref={constraintsRef}
+            className="flex gap-4 md:gap-[20px] items-center justify-center bp1232:justify-start flex-wrap"
+          >
+            {softSkills.map((skill) =>
+              !active ? (
                 <SkillWrapper
                   ref={constraintsRef}
                   key={skill.id}
@@ -35,28 +35,19 @@ export const SoftSkillsSection = () => {
                     {skill.name}
                   </span>
                 </SkillWrapper>
-              ))}
-            </div>
-          ) : (
-            <Reorder.Group
-              axis="y"
-              values={items}
-              onReorder={setItems}
-              className="flex gap-4 md:gap-[20px] items-center justify-center bp1232:justify-start flex-wrap"
-            >
-              {items.map((skill) => ( 
-                <Reorder.Item
-                  key={skill.id}
-                  value={skill}
+              ) : (
+                <m.div
                   className="cursor-grab bg-texture flex items-center justify-center bp461:justify-start gap-[10px] px-[15px] md:px-[20px] py-[10px] rounded-md w-full bp461:w-auto"
+                  id={`photo-${skill.id}`}
+                  {...stackPhotoWrapperConfig}
                 >
                   <span className="text-accent text-[16px] bp461:text-[20px] md:text-[18px] lg:text-[23px] text-center">
                     {skill.name}
                   </span>
-                </Reorder.Item>
-              ))}
-            </Reorder.Group>
-          )}
+                </m.div>
+              )
+            )}
+          </div>
         </DefaultSection>
       </div>
     </div>
