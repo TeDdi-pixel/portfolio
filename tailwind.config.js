@@ -17,6 +17,7 @@ module.exports = {
       screens: {
         bp353: "353px",
         bp395: "395px",
+        bp425: "425px",
         bp461: "461px",
         bp500: "500px",
         bp523: "523px",

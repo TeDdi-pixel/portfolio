@@ -1,9 +1,9 @@
 import { m } from "framer-motion";
-import { backdropBlurConfig } from "../config/backdropBlur";
 import { useHeaderStore } from "../../header/store";
 import useWidth from "../../../hooks/useWidth";
+import { pcBurgerAnimation } from "../config/pcBurgerAnimation";
 
-export const BackgroundCircle = () => {
+export const TabletBurgerMenu = () => {
   const { burgerMenu, burgerLinkTaped, popUpNav } = useHeaderStore(
     (state) => state
   );
@@ -11,7 +11,7 @@ export const BackgroundCircle = () => {
 
   return (
     <m.div
-      {...backdropBlurConfig(burgerMenu, burgerLinkTaped, popUpNav,active)}
+      {...pcBurgerAnimation(burgerMenu, burgerLinkTaped, popUpNav,active)}
       className="fixed z-10 bg-accent w-[51px] h-[51px] md:w-[60px] md:h-[60px] right-[25px] md:right-[21px]"
     ></m.div>
   );

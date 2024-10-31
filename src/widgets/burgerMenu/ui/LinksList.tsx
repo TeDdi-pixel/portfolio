@@ -38,7 +38,7 @@ const LinksList = () => {
                   <span className="absolute block w-7 h-5 bg-texture rounded-full animate-spin-slow top-[24px] -right-[35px]"></span>
                 </>
               ) : (
-                <span className="text-purple">{link.text}</span>
+                <span className="text-accent bp425:text-purple">{link.text}</span>
               )}
             </m.li>
           </Link>
