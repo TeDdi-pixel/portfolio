@@ -5,11 +5,15 @@ import { contacts } from "../config";
 import ContactTitle from "./ContactTitle";
 import ContactLink from "./ContactLink";
 import RegularContact from "./RegularContact";
+import useSectionInView from "../../../../hooks/useSectionInView";
 
 export const ContactsSection = () => {
   const { active } = useWidth(1023);
+  const handleSectionId = useSectionInView();
   return (
     <div
+      ref={handleSectionId}
+      id="Contacts"
       className="py-[87.5px] md:py-[143px] rounded-3xl w-full h-auto bg-contacts animate-scrollBackground2"
       style={{ minHeight: `${active ? "calc(100vh - 53.75px)" : "100vh"}` }}
     >
@@ -19,7 +23,7 @@ export const ContactsSection = () => {
         <Element name="Contacts" />
 
         <div className="px-[15px] md:px-[30px] lg:px-[50px]">
-          <Title title="Contacts" emoji="📞" />
+          <Title title="Contacts" emoji="🥱" />
           {contacts.map((contact) => (
             <div key={contact.id}>
               <ContactTitle

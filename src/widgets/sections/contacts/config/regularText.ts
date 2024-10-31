@@ -4,17 +4,16 @@ export const regularTextConfig = (contactId: number) => {
     initial: {
       opacity: 0,
       scale: 0.85,
-      x: -50,
       filter: `blur(5px)`,
     },
     whileInView: {
       opacity: 1,
       filter: "blur(0px)",
-      x: 0,
-      y: 0,
       scale: 1,
       transition: {
-        duration: 0.5,
+        type: "spring",
+        stiffness: 300,
+        damping: 20,
         delay: 0.1 * contactId * 0.5,
       },
     },

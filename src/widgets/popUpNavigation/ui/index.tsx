@@ -5,10 +5,13 @@ import { useHeaderStore } from "../../header/store";
 import { popUpNavigationConfig } from "../config";
 
 export const PopUpNavigation = () => {
-  const { selectedLink, setSelectedLink } = useHeaderStore((state) => state);
+  const { burgerLinkTaped, selectedLink, setSelectedLink } = useHeaderStore(
+    (state) => state
+  );
+
   return (
     <m.div
-      {...popUpNavigationConfig}
+      {...popUpNavigationConfig(burgerLinkTaped)}
       className="fixed top-2.5 left-1/2 z-[999] w-[598px]"
     >
       <div className="bg-accent px-8 py-3 rounded-[20px] -translate-x-1/2">
@@ -19,8 +22,7 @@ export const PopUpNavigation = () => {
               to={link.text}
               smooth={true}
               duration={500}
-              offset={link.text === "Summary" ? -300 : -118.5 }
-              className="cursor-pointer"
+              offset={link.text === "Summary" ? -300 : -118.5}
               onClick={() => setSelectedLink(link.text)}
             >
               <li className="relative cursor-pointer pb-1 text-[16px]">

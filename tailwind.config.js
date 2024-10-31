@@ -20,12 +20,15 @@ module.exports = {
         bp461: "461px",
         bp500: "500px",
         bp523: "523px",
+        bp579: "579px",
         bp580: "580px",
         bp632: "632px",
         bp710: "710px",
         bp900: "900px",
+        bp912: "913px",
         bp936: "936px",
         bp1050: "1050px",
+        bp1138: "1138px",
         bp1232: "1232px",
         bp1296: "1296px",
         bp1386: "1386px",
@@ -88,6 +91,8 @@ module.exports = {
       },
       boxShadow: {
         custom: "rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;",
+        custom2:
+          "rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;",
       },
       keyframes: {
         scrollBackground: {

@@ -1,18 +1,18 @@
-import {m} from 'framer-motion'
-import { imgWrapperConfig } from '../config/imgWrapper'
+import { m } from "framer-motion";
+import { imgWrapperConfig } from "../config/imgWrapper";
 const MainPhoto = () => {
   return (
     <m.div
-          className="flex-shrink-0 max-w-[280px] max-h-[280px] w-full h-full xl:max-w-[380px] xl:max-h-[380px] rounded-full overflow-hidden relative"
-          {...imgWrapperConfig}
-        >
-          <img
-            src="./main_photo.webp"
-            alt="main_photo"
-            className="object-cover max-w-[280px] max-h-[280px]  xl:max-w-[380px] xl:max-h-[380px] w-full h-full"
-          />
-        </m.div>
-  )
-}
+      {...imgWrapperConfig}
+      className="mx-auto bp912:mx-0 w-[280px] h-[280px] xl:w-[480px] xl:h-[430px] rounded-full bp912:rounded-3xl overflow-hidden shadow-custom2"
+    >
+      <img
+        src="./main_photo.webp"
+        alt="main_photo"
+        className="object-cover w-full h-full"
+      />
+    </m.div>
+  );
+};
 
-export default MainPhoto
+export default MainPhoto;

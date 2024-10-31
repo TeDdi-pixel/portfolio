@@ -1,5 +1,3 @@
-import { Element } from "react-scroll";
-import { Title } from "../../../../entities/sectionTitle";
 import { Photo, projects } from "../../../../pages/homePage/config";
 import ProjectName from "./ProjectName";
 import ProjectUrl from "./ProjectUrl";
@@ -10,6 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { TbExternalLink } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { sliderConfig } from "../config/slider";
+import useSectionInView from "../../../../hooks/useSectionInView";
 
 type Project = {
   id: number;
@@ -21,13 +20,15 @@ type Project = {
 };
 
 export const ProjectsSection = () => {
+  const handleSectionId = useSectionInView();
   return (
-    <div className="bg-gradient-blue rounded-3xl">
+    <div
+      ref={handleSectionId}
+      id="Projects"
+      className="bg-gradient-blue rounded-3xl"
+    >
       <div className="max-w-[1400px] mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] pt-[87.5px] md:pt-[143px]">
-        <DefaultSection>
-          <Element name="Projects" />
-          <Title title="Projects" emoji="😇" />
-
+        <DefaultSection title="Projects" emoji="😇">
           {projects.map((project: Project) => (
             <div
               key={project.id}

@@ -1,6 +1,6 @@
 import { useHeaderStore } from "../../header/store";
 import { AnimatePresence } from "framer-motion";
-import { BackdropBlur } from "./BackdropBlur";
+import { BackgroundCircle } from "./BackgroundCircle";
 import BurgerMenuIcon from "./BurgerMenuIcon";
 import LinksList from "./LinksList";
 
@@ -13,7 +13,7 @@ export const BurgerMenu = () => {
       <AnimatePresence mode="wait">
         {burgerMenu && (
           <>
-            <BackdropBlur />
+            <BackgroundCircle />
             <LinksList />
           </>
         )}

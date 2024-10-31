@@ -1,6 +1,6 @@
 #nav-icon2 {
   flex-shrink: 0;
-  z-index: 100;
+  z-index: 1000;
   width: 40px;
   height: 25px;
   -webkit-transform: rotate(0deg);

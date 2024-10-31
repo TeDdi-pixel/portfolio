@@ -6,10 +6,7 @@ export const headerLinkConfig = (linkIndex: number) => {
       opacity: 1,
       x: 0,
       filter: "blur(0px)",
-      transition: {
-        duration: 0.4,
-        delay: 0.1 * linkIndex,
-      },
+      transition: { type: "spring", stiffness: 400, damping: 17,delay: 0.1 * linkIndex, }
     },
   };
 };

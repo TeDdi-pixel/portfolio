@@ -1,23 +1,28 @@
-import { Element } from "react-scroll";
-import DefaultSection from "../../../../shared/section/DefaultSection";
 import { MainTitle } from "./MainTitle";
 import MainPhoto from "./MainPhoto";
 import { MainText } from "./MainText";
 import HandDown from "./HandDown";
+import { Element } from "react-scroll";
+import useSectionInView from "../../../../hooks/useSectionInView";
 
 export const SummarySection = () => {
-  return (
-    <DefaultSection pb={false}>
-      <Element name="Summary" />
+  const handleSectionId = useSectionInView();
 
-      <div className="flex items-center flex-col bp900:flex-row gap-12 xl:gap-44 pb-[87.5px] bp900:pb-[143px]">
-        <div className="flex flex-col w-full justify-between items-center bp1296:gap-[0px] sm:gap-[15px]">
+  return (
+    <section
+      ref={handleSectionId}
+      id="Summary"
+      className="px-[15px] bp500:px-[34.5px] relative w-full max-w-[1400px]"
+    >
+      <Element name="Summary" />
+      <div className="flex items-center gap-12 xl:gap-44 pb-[87.5px] bp900:pb-[143px] flex-wrap bp912:flex-nowrap">
+        <div className="w-full">
           <MainTitle />
           <MainText />
         </div>
         <MainPhoto />
       </div>
       <HandDown />
-    </DefaultSection>
+    </section>
   );
 };
