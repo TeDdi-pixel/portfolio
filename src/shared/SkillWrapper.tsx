@@ -1,4 +1,4 @@
-import { forwardRef, ReactNode, RefObject } from "react";
+import { ReactNode } from "react";
 import { m } from "framer-motion";
 import { stackPhotoWrapperConfig } from "../widgets/sections/hardSkills/config";
 
@@ -6,23 +6,20 @@ type Props = {
   children: ReactNode;
   skillId: number;
 };
-
-const SkillWrapper = forwardRef<HTMLDivElement, Props>(
-  ({ children, skillId }: Props, ref) => {
-    return (
-      <m.div
-        drag
-        dragConstraints={ref as RefObject<HTMLElement>}
-        dragElastic={1}
-        dragSnapToOrigin={true}
-        className="cursor-grab bg-texture flex items-center justify-center bp461:justify-start gap-[10px] px-[15px] md:px-[20px] py-[10px] rounded-md w-full bp461:w-auto"
-        id={`photo-${skillId}`}
-        {...stackPhotoWrapperConfig}
-      >
-        {children}
-      </m.div>
-    );
-  }
-);
-
+const SkillWrapper = ({ children, skillId }: Props) => {
+  const handleDelay = (skillId: number): number => {
+    if (skillId === 0) return 0.05;
+    if (skillId === 1) return 0.06;
+    return skillId * 0.03;
+  };
+  return (
+    <m.div
+      className="bg-texture flex items-center gap-[10px] px-[15px] md:px-[20px] py-[10px] rounded-md w-full bp461:w-auto justify-center bp461:justify-start"
+      id={`photo-${skillId}`}
+      {...stackPhotoWrapperConfig(handleDelay(skillId))}
+    >
+      {children}
+    </m.div>
+  );
+};
 export default SkillWrapper;
