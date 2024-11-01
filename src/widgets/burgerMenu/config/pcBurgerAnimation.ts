@@ -9,7 +9,7 @@ export const pcBurgerAnimation = (
     damping: 20,
     stiffness: 100,
     restDelta: 0.005,
-    ease: [0, 0.71, 0.2, 1.01],
+    // ease: [0, 0.71, 0.2, 1.01],
   };
 
   const commonProps = {
