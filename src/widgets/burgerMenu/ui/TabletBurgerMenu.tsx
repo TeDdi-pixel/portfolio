@@ -12,7 +12,7 @@ export const TabletBurgerMenu = () => {
   return (
     <m.div
       {...pcBurgerAnimation(burgerMenu, burgerLinkTaped, popUpNav, active)}
-      className="fixed z-10 bg-accent w-[51px] h-[51px] md:w-[60px] md:h-[60px] right-[25px] md:right-[21px]"
+      className="fixed z-10 bg-accent w-[51px] h-[51px] md:w-[60px] md:h-[60px] right-[25px] md:right-[21px] rounded-[20px]"
     ></m.div>
   );
 };

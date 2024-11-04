@@ -9,11 +9,9 @@ export const pcBurgerAnimation = (
     damping: 20,
     stiffness: 100,
     restDelta: 0.005,
-    // ease: [0, 0.71, 0.2, 1.01],
   };
 
   const commonProps = {
-    borderRadius: burgerMenu ? 20 : 100,
     transition: {
       duration: 0.3,
       ...commonTransition,
@@ -34,7 +32,6 @@ export const pcBurgerAnimation = (
     top: 0,
     height: "100vh",
     width: burgerMenu ? "100%" : 598,
-    filter: burgerMenu ? "blur(2px)" : "blur(0px)",
     ...commonProps,
   };
 
@@ -44,12 +41,10 @@ export const pcBurgerAnimation = (
     opacity: popUpNav ? 1 : 0,
     height: popUpNav ? 48.5 : 0,
     top: popUpNav ? "0.75rem" : -200,
-    filter: "blur(0px)",
     transition: {
       duration: 1,
       ...commonTransition,
     },
-    borderRadius: 20,
     width: active ? 198 : 598,
   };
 

@@ -16,7 +16,7 @@ export const titleWrapperConfig = (active: boolean) => {
       filter: "blur(0px)",
       scale: 1,
       x: 0,
-      transition: { type: "spring", stiffness: 400, damping: 17 }
+      transition: { duration: 0.4, delay: 0.2 }
     },
   };
 };
