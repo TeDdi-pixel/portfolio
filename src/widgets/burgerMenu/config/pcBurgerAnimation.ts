@@ -6,7 +6,7 @@ export const pcBurgerAnimation = (
 ) => {
   const commonTransition = {
     type: "spring",
-    damping: 20,
+    damping: burgerLinkTaped ? 20: 30,
     stiffness: 100,
     restDelta: 0.005,
   };

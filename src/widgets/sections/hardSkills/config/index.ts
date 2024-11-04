@@ -8,7 +8,7 @@ export const stackPhotoWrapperConfig = (delay: number) => {
     whileInView: {
       opacity: 1,
       scale: 1,
-      transition: {type: "spring", stiffness: 400, damping: 17, delay: delay },
+      transition: {duration: 0.3, delay: delay },
     },
   };
 };
