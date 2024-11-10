@@ -26,20 +26,15 @@ export const ContactsSection = () => {
           <Title title="Contacts" emoji="🥱" />
           {contacts.map((contact) => (
             <div key={contact.id}>
-              <ContactTitle
-                contactId={contact.id}
-                contactTitle={contact.title}
-              />
+              <ContactTitle contactTitle={contact.title} />
 
               {contact.text && (
                 <RegularContact
-                  contactId={contact.id}
                   contactText={contact.text}
                 />
               )}
               {contact.linkText && (
                 <ContactLink
-                  contactId={contact.id}
                   contactLink={contact.linkText}
                 />
               )}

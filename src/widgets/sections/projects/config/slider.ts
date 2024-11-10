@@ -3,14 +3,12 @@ export const sliderConfig = {
   initial: {
     opacity: 0,
     scale: 0.95,
-    y: 20,
-    filter: `blur(5px)`,
+    transform: 'translateY(20px)',
   },
   whileInView: {
     scale: 1,
-    y: 0,
+    transform: 'translateY(0px)',
     opacity: 1,
-    filter: "blur(0px)",
     transition: {
       duration: 0.2,
       delay: 0.1,
