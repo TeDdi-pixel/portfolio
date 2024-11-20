@@ -25,11 +25,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div
-        className={`flex items-center flex-col justify-between w-full mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] bg-gradient-purple min-h-[100vh] transition-[border-radius] duration-1000 ${
-          burgerMenu ? "rounded-[20px]" : "rounded-b-3xl"
-        }`}
-      >
+      <div className="flex items-center flex-col justify-between w-full mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] bg-gradient-purple min-h-[100vh] transition-[border-radius] duration-1000">
         <Header />
         <SummarySection />
       </div>

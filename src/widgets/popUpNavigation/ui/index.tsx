@@ -5,13 +5,13 @@ import { useHeaderStore } from "../../header/store";
 import { popUpNavigationConfig } from "../config";
 
 export const PopUpNavigation = () => {
-  const { burgerLinkTaped, selectedLink, setSelectedLink } = useHeaderStore(
+  const { selectedLink, setSelectedLink } = useHeaderStore(
     (state) => state
   );
 
   return (
     <m.div
-      {...popUpNavigationConfig(burgerLinkTaped)}
+      {...popUpNavigationConfig}
       className="fixed top-2.5 left-1/2 z-[999] w-[598px]"
     >
       <div className="bg-accent px-8 py-3 rounded-[20px] -translate-x-1/2">

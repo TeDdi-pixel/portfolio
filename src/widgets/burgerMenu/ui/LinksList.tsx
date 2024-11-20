@@ -6,17 +6,13 @@ import { useHeaderStore } from "../../header/store";
 import { liConfig } from "../config/li";
 
 const LinksList = () => {
-  const {
-    toggleBurgerMenu,
-    setSelectedLink,
-    selectedLink,
-    setBurgerLinkTaped,
-  } = useHeaderStore((state) => state);
+  const { toggleBurgerMenu, setSelectedLink, selectedLink } = useHeaderStore(
+    (state) => state
+  );
 
   const handleClick = (linkId: string) => {
     setSelectedLink(linkId);
     toggleBurgerMenu();
-    setBurgerLinkTaped(true);
   };
 
   return (
@@ -26,7 +22,12 @@ const LinksList = () => {
     >
       <ul className="flex justify-center items-center flex-col gap-5 w-full h-full ">
         {links.map((link, index) => (
-          <Link key={link.text} to={link.text} offset={-118.5} className="relative">
+          <Link
+            key={link.text}
+            to={link.text}
+            offset={-118.5}
+            className="relative"
+          >
             <m.li
               {...liConfig(index)}
               className="text-accent text-[30px] font-bold"
@@ -38,7 +39,9 @@ const LinksList = () => {
                   <span className="absolute block w-7 h-5 bg-texture rounded-full animate-spin-slow top-[24px] -right-[35px]"></span>
                 </>
               ) : (
-                <span className="text-accent bp425:text-purple">{link.text}</span>
+                <span className="text-purple">
+                  {link.text}
+                </span>
               )}
             </m.li>
           </Link>
