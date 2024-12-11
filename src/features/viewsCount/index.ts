@@ -1,0 +1,1 @@
+export { ViewsCount } from "./modul";

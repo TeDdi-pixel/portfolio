@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { useHeaderStore } from "../../widgets/header/store";
 import { ContactsSection } from "../../widgets/sections/contacts";
 import { EducationSection } from "../../widgets/sections/education";
+import { ViewsCount } from "../../features/viewsCount";
 
 const HomePage = () => {
   const { burgerMenu } = useHeaderStore((state) => state);
@@ -35,6 +36,7 @@ const HomePage = () => {
       <SoftSkillsSection />
       <EducationSection />
       <ContactsSection />
+      <ViewsCount />
     </>
   );
 };
