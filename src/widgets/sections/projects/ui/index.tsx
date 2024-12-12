@@ -28,7 +28,7 @@ export const ProjectsSection = () => {
       className="bg-gradient-blue rounded-3xl"
     >
       <div className="max-w-[1400px] mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] pt-[87.5px] md:pt-[143px]">
-        <DefaultSection title="Projects" emoji="😇">
+        <DefaultSection title="Pet-projects" emoji="😇">
           {projects.map((project: Project) => (
             <div
               key={project.id}

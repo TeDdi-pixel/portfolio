@@ -3,6 +3,7 @@ import { getCounter, updateCounter } from "../modul/api";
 import { isUniqueUser, setUniqueUser } from "../lib/utils";
 import { animate, useMotionValue, useTransform, m } from "framer-motion";
 import { defaultAnimation } from "../../../shared/defaultAnimation";
+import { FaEye } from "react-icons/fa";
 
 export const ViewersCounter = () => {
   const [viewersCounter, setViewersCounter] = useState(0);
@@ -52,11 +53,11 @@ export const ViewersCounter = () => {
 
   return (
     <m.div
-      className="fixed min-w-[240px] bottom-5 right-5 z-1000 px-[35px] py-[10px] bg-background2 rounded-md shadow-custom2 flex items-center gap-[3px] justify-center"
+      className="fixed bottom-5 right-5 z-1000 px-[13px] bp632:px-[20px] py-[6.5px] bp632:py-[10px] bg-background2 rounded-md shadow-custom2 flex items-center gap-[3px] justify-center"
       {...defaultAnimation({ margin: "20px 0px 0px 0px", direction: 15 })}
     >
-      <span className="text-white text-[16px]">All-time viewers: </span>
-      <span className="text-[20px] text-texture font-bold min-w-[38px] text-center">
+      <FaEye className="w-[24px] h-[24px] text-white" />
+      <span className="text-[20px] text-texture font-bold min-w-[40px] text-center">
         {displayValue}
       </span>
     </m.div>
