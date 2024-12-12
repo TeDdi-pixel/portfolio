@@ -49,7 +49,7 @@ export const contacts = [
         </span>
       </div>
     ),
-    linkText: "https://www.linkedin.com/in/vladislav-valuyga-546327231/",
+    linkText: "https://www.linkedin.com/in/vladislav-valuga-546327231/",
   },
   {
     id: 4,
