@@ -7,8 +7,7 @@ const BurgerMenuIcon = () => {
   return (
     <m.div
       id="nav-icon2"
-      style={{ transform: burgerMenu ? "scale(1)" : "scale(0.75)" }}
-      {...burgerConfig}
+      {...burgerConfig(burgerMenu ? 1 : 0.75)}
       className={`bp1050:hidden right-[15px] md:right-[30px] scale-75 sm:scale-100 ${
         burgerMenu ? "open" : ""
       }`}

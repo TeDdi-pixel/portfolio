@@ -2,19 +2,21 @@ type TypeArgs = {
   margin?: string;
   index?: number;
   direction?: number;
-  amount?:string
+  amount?: string;
+  scale?: number;
 };
 
 export const defaultAnimation = ({
   margin,
   index,
   direction = -15,
+  scale,
 }: TypeArgs) => {
   return {
     viewport: { once: true, margin: margin },
     initial: {
       opacity: 0,
-      scale: 0.8,
+      scale: scale ?? 0.8,
       transform: `translateX(${direction}px)`,
     },
     whileInView: {
