@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+b {
+  color: #1fb2aa;
+}
+
 @layer utilities {
   .bg-react {
     background-image: url("../public/react_bg.webp");
@@ -103,7 +107,7 @@
   background-color: hsl(213, 32%, 11%);
 }
 .bg-gradient-animated {
-  background: linear-gradient(90deg, #1FB2AA, #F1F5F9);
+  background: linear-gradient(90deg, #1fb2aa, #f1f5f9);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

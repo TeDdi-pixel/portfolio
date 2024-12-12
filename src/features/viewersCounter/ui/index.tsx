@@ -31,7 +31,11 @@ export const ViewersCounter = () => {
 
   useEffect(() => {
     const animation = setTimeout(
-      () => animate(counter, viewersCounter, { duration: 10 }),
+      () =>
+        animate(counter, viewersCounter, {
+          duration: 7,
+          ease: [0.42, 0, 0.58, 1],
+        }),
       500
     );
     return () => clearTimeout(animation);

@@ -14,7 +14,7 @@ export const AnimatedText = ({ text }: { text: string }) => {
           key={index}
           {...defaultAnimation({ margin: "20px 0px 0px 0px", index })}
         >
-          {line}{" "}
+          <span dangerouslySetInnerHTML={{ __html: line }} />
         </m.span>
       ))}
     </div>
