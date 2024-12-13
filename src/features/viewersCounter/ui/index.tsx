@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { getCounter, updateCounter } from "../modul/api";
 import { isUniqueUser, setUniqueUser } from "../lib/utils";
 import { animate, useMotionValue, useTransform, m } from "framer-motion";
 import { defaultAnimation } from "../../../shared/defaultAnimation";
 import { FaEye } from "react-icons/fa";
+import CounterSpinner from "../../../shared/spinner/CounterSpinner";
+const Counter = lazy(() => import("./Counter"));
 
-export const ViewersCounter = () => {
+const ViewersCounter = () => {
   const [viewersCounter, setViewersCounter] = useState(0);
   const [displayValue, setDisplayValue] = useState(0);
   const counter = useMotionValue(0);
@@ -57,9 +59,10 @@ export const ViewersCounter = () => {
       {...defaultAnimation({ margin: "20px 0px 0px 0px", direction: 15 })}
     >
       <FaEye className="w-[24px] h-[24px] text-white" />
-      <span className="text-[20px] text-texture font-bold min-w-[40px] text-center">
-        {displayValue}
-      </span>
+      <Suspense fallback={<CounterSpinner />}>
+        <Counter displayValue={displayValue} />
+      </Suspense>
     </m.div>
   );
 };
+export default ViewersCounter;

@@ -1,8 +1,8 @@
 import { Header } from "../../widgets/header";
 import { lazy, Suspense, useEffect } from "react";
 import { useHeaderStore } from "../../widgets/header/store";
-import { ViewersCounter } from "../../features/viewersCounter";
 import Spinner from "../../shared/spinner/Spinner";
+import CounterSpinner from "../../shared/spinner/CounterSpinner";
 const SummarySection = lazy(() => import("../../widgets/sections/summary/ui"));
 const HardSkillsSection = lazy(
   () => import("../../widgets/sections/hardSkills/ui")
@@ -19,6 +19,7 @@ const EducationSection = lazy(
 const ContactsSection = lazy(
   () => import("../../widgets/sections/contacts/ui")
 );
+const ViewersCounter = lazy(() => import("../../features/viewersCounter/ui"));
 
 const HomePage = () => {
   const { burgerMenu } = useHeaderStore((state) => state);
@@ -55,8 +56,9 @@ const HomePage = () => {
           <Suspense fallback={<Spinner />}>{section.component}</Suspense>
         </div>
       ))}
-
-      <ViewersCounter />
+      <Suspense fallback={<CounterSpinner />}>
+        <ViewersCounter />
+      </Suspense>
     </>
   );
 };
