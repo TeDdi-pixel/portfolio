@@ -52,7 +52,10 @@ const HomePage = () => {
       </div>
 
       {sections.map((section) => (
-        <div key={section.id} className="min-h-[553px] relative">
+        <div
+          key={section.id}
+          className="min-h-[360px] md:min-h-[526px] relative"
+        >
           <Suspense fallback={<Spinner />}>{section.component}</Suspense>
         </div>
       ))}
