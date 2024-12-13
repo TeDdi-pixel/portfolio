@@ -7,7 +7,7 @@ import ContactLink from "./ContactLink";
 import RegularContact from "./RegularContact";
 import useSectionInView from "../../../../hooks/useSectionInView";
 
-export const ContactsSection = () => {
+const ContactsSection = () => {
   const { active } = useWidth(1023);
   const handleSectionId = useSectionInView();
   return (
@@ -28,15 +28,9 @@ export const ContactsSection = () => {
             <div key={contact.id}>
               <ContactTitle contactTitle={contact.title} />
 
-              {contact.text && (
-                <RegularContact
-                  contactText={contact.text}
-                />
-              )}
+              {contact.text && <RegularContact contactText={contact.text} />}
               {contact.linkText && (
-                <ContactLink
-                  contactLink={contact.linkText}
-                />
+                <ContactLink contactLink={contact.linkText} />
               )}
             </div>
           ))}
@@ -45,3 +39,5 @@ export const ContactsSection = () => {
     </div>
   );
 };
+
+export default ContactsSection;

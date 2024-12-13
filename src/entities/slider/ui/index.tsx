@@ -9,6 +9,7 @@ import useWidth from "../../../hooks/useWidth";
 import { Photo } from "../../../pages/homePage/config";
 import useSliderWidth from "../../../hooks/useSliderWidth";
 import { sliderConfig } from "../config";
+import LazyImg from "../../../shared/lazyImg/LazyImg";
 
 type SliderProps = {
   photos: Photo[];
@@ -32,16 +33,16 @@ export const Slider = ({ photos }: SliderProps) => {
           style={{ maxWidth: swiperWidth }}
           key={photo.id}
           className={`${
-            active ? "max-h-[300px] md:max-h-[350px]" : "max-h-[300px]"
+            active
+              ? "max-h-[300px] md:max-h-[350px]"
+              : "max-h-[300px] bg-slate-900"
           } xl:max-h-[350px] w-full h-full select-none`}
         >
-          <img
+          <LazyImg
             src={photo.path}
             alt={photo.alt}
             style={{ maxWidth: swiperWidth }}
-            className={`object-cover xl:max-h-[350px] w-full h-full ${
-              active ? "max-h-[300px] md:max-h-[350px]" : "max-h-[300px]"
-            }`}
+            active={active}
           />
         </SwiperSlide>
       ))}

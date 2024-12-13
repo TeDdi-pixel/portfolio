@@ -45,6 +45,12 @@ export const stackPhotos = [
   },
   {
     id: 15,
+    alt: "framer-motion logo",
+    path: "./framer-motion.webp",
+    tooltip: "Framer-motion",
+  },
+  {
+    id: 16,
     alt: "Github_logo",
     path: "./github_logo.webp",
     tooltip: "GitHub",

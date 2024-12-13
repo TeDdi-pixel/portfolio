@@ -5,7 +5,7 @@ import HandDown from "./HandDown";
 import { Element } from "react-scroll";
 import useSectionInView from "../../../../hooks/useSectionInView";
 
-export const SummarySection = () => {
+const SummarySection = () => {
   const handleSectionId = useSectionInView();
 
   return (
@@ -26,3 +26,5 @@ export const SummarySection = () => {
     </section>
   );
 };
+
+export default SummarySection;

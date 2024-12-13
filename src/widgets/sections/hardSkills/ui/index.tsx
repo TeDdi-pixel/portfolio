@@ -17,7 +17,7 @@ export const HardSkillsSection = () => {
         className="mx-auto my-0 max-w-[1400px] relative w-full scroll-pt-[45.5px] px-[15px] bp500:px-[34.5px]"
       >
         <Element name="Hard skills" />
-        <div className=" px-[15px] md:px-[30px] lg:px-[50px] ">
+        <div className="px-[15px] md:px-[30px] lg:px-[50px] ">
           <Title title="Hard skills" emoji="🚀" />
           <div className="flex gap-4 md:gap-[20px] items-center flex-wrap justify-center bp1386:justify-start select-none">
             {stackPhotos.map((photo) => (
@@ -34,3 +34,5 @@ export const HardSkillsSection = () => {
     </BgWrapper>
   );
 };
+
+export default HardSkillsSection;

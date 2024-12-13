@@ -3,7 +3,7 @@ import { softSkills } from "../config";
 import SkillWrapper from "../../../../shared/SkillWrapper";
 import useSectionInView from "../../../../hooks/useSectionInView";
 
-export const SoftSkillsSection = () => {
+const SoftSkillsSection = () => {
   const handleSectionId = useSectionInView();
 
   return (
@@ -28,3 +28,4 @@ export const SoftSkillsSection = () => {
     </div>
   );
 };
+export default SoftSkillsSection;

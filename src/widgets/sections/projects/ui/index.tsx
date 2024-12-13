@@ -6,7 +6,7 @@ import { Slider } from "../../../../entities/slider";
 import DefaultSection from "../../../../shared/section/DefaultSection";
 import { FaGithub } from "react-icons/fa";
 import { TbExternalLink } from "react-icons/tb";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { sliderConfig } from "../config/slider";
 import useSectionInView from "../../../../hooks/useSectionInView";
 
@@ -19,7 +19,7 @@ type Project = {
   github: string;
 };
 
-export const ProjectsSection = () => {
+const ProjectsSection = () => {
   const handleSectionId = useSectionInView();
   return (
     <div
@@ -28,7 +28,7 @@ export const ProjectsSection = () => {
       className="bg-gradient-blue rounded-3xl"
     >
       <div className="max-w-[1400px] mx-auto my-0 px-[15px] md:px-[30px] lg:px-[50px] pt-[87.5px] md:pt-[143px]">
-        <DefaultSection title="Pet-projects" emoji="😇">
+        <DefaultSection title="Projects" emoji="😇">
           {projects.map((project: Project) => (
             <div
               key={project.id}
@@ -49,9 +49,9 @@ export const ProjectsSection = () => {
                 <ProjectDescription description={project.description} />
               </div>
 
-              <motion.div {...sliderConfig}>
+              <m.div {...sliderConfig}>
                 <Slider photos={project.photos} />
-              </motion.div>
+              </m.div>
             </div>
           ))}
         </DefaultSection>
@@ -59,3 +59,4 @@ export const ProjectsSection = () => {
     </div>
   );
 };
+export default ProjectsSection;

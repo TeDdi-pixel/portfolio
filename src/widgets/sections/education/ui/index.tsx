@@ -5,7 +5,7 @@ import BgWrapper from "../../../../shared/section/BgWrapper";
 import { AnimatedText } from "../../../../entities/animatedText";
 import useSectionInView from "../../../../hooks/useSectionInView";
 
-export const EducationSection = () => {
+const EducationSection = () => {
   const handleSectionId = useSectionInView();
   return (
     <BgWrapper bgColor="bg-gradient-purple" rounded>
@@ -27,3 +27,4 @@ export const EducationSection = () => {
     </BgWrapper>
   );
 };
+export default EducationSection;
