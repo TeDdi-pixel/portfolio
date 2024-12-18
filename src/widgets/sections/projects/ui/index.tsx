@@ -38,12 +38,10 @@ const ProjectsSection = () => {
                 <div className="flex gap-[20px] items-center mb-4">
                   <ProjectName name={project.name} />
                   <ProjectUrl
-                    id={"projectGitHub"}
                     url={project.github}
                     icon={<FaGithub className="w-[25px] h-[25px]" />}
                   />
                   <ProjectUrl
-                    id="projectInBrowser"
                     url={project.url}
                     icon={<TbExternalLink className="w-[25px] h-[25px]" />}
                   />

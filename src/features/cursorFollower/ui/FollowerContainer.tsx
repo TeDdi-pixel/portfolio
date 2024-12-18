@@ -1,11 +1,17 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import useMouse from "@react-hook/mouse-position";
 import { m } from "framer-motion";
 import { useCursor } from "../store";
 import { useEmojis } from "../../../entities/sectionTitle/store";
 const FollowerContainer = ({ children }: { children: ReactNode }) => {
-  const { cursorType, isCursorEnabled, cursorText, setIsCursoreEnabled } =
-    useCursor((state) => state);
+  const {
+    cursorType,
+    isCursorEnabled,
+    cursorText,
+    setIsCursorEnabled,
+    isTouchDevice,
+    setIsTouchDevice,
+  } = useCursor((state) => state);
   const { setIsEmojisEnabled } = useEmojis((state) => state);
   const ref = useRef(null);
   const mouse = useMouse(ref, {
@@ -13,15 +19,13 @@ const FollowerContainer = ({ children }: { children: ReactNode }) => {
     leaveDelay: 0,
   });
 
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-
   useEffect(() => {
     const checkTouchDevice = () => {
       const isTouchDevice =
         "ontouchstart" in window || navigator.maxTouchPoints > 0;
-      setIsTouchDevice(isTouchDevice);
       setIsEmojisEnabled(isTouchDevice);
-      setIsCursoreEnabled(!isTouchDevice);
+      setIsTouchDevice(isTouchDevice);
+      setIsCursorEnabled(!isTouchDevice);
     };
     checkTouchDevice();
   }, []);
@@ -35,7 +39,7 @@ const FollowerContainer = ({ children }: { children: ReactNode }) => {
       height: 20,
       width: 20,
       fontSize: "16px",
-      backgroundColor: "hsl(49, 91%, 52%)",
+      backgroundColor: "rgb(125, 91, 182)",
       x: mouseXPosition - 10,
       y: mouseYPosition - 10,
     },
@@ -108,36 +112,43 @@ const FollowerContainer = ({ children }: { children: ReactNode }) => {
         type: "spring",
       },
     },
-    projectGitHub: {
-      opacity: 1,
-      backgroundColor: "rgba(0, 0, 0, 1)",
-      color: "rgba(255, 255, 255, 1)",
-      height: 60,
-      width: 170,
-      fontSize: "18px",
-      x: mouseXPosition - 50,
-      y: mouseYPosition - 70,
-      transition: {
-        type: "spring",
-        bounce: 0.3,
-        width: { duration: 0 },
-        height: { duration: 0 },
-      },
-    },
-    projectInBrowser: {
+    projectLink: {
       opacity: 1,
       backgroundColor: "rgb(125, 91, 182)",
       color: "rgba(255, 255, 255, 1)",
       height: 60,
-      width: 170,
+      width: 60,
       fontSize: "18px",
       x: mouseXPosition - 50,
       y: mouseYPosition - 70,
       transition: {
         type: "spring",
-        bounce: 0.3,
-        width: { duration: 0 },
-        height: { duration: 0 },
+      },
+    },
+    performance: {
+      opacity: 1,
+      backgroundColor: "hsl(265, 34%, 23%)",
+      color: "rgba(255, 255, 255, 1)",
+      height: 80,
+      width: 80,
+      fontSize: "18px",
+      x: mouseXPosition - 130,
+      y: mouseYPosition - 80,
+      transition: {
+        type: "spring",
+      },
+    },
+    contact: {
+      opacity: 1,
+      backgroundColor: "rgba(255, 255, 255, 1)",
+      color: "rgba(255, 255, 255, 1)",
+      height: 80,
+      width: 80,
+      fontSize: "18px",
+      x: mouseXPosition - 40,
+      y: mouseYPosition - 40,
+      transition: {
+        type: "spring",
       },
     },
   };
@@ -149,16 +160,16 @@ const FollowerContainer = ({ children }: { children: ReactNode }) => {
         <m.div
           variants={variants}
           className={`fixed z-[1010] flex content-center justify-center top-0 left-0 h-[20px] w-[20px] bg-purple rounded-full pointer-events-none text-white text-center text-[16px] ${
-            cursorType != "default" &&
-            cursorType != "text" &&
-            cursorType != "projectGitHub" &&
-            cursorType != "projectInBrowser"
-              ? "mix-blend-difference"
-              : ""
+            cursorType === "default" ||
+            cursorType === "performance" ||
+            cursorType === "projectLink" ||
+            cursorType === "text"
+              ? ""
+              : "mix-blend-difference"
           }`}
           animate={cursorType}
         >
-          <span className="text-[20px] flex w-full h-full items-center justify-center">
+          <span className="text-[20px] flex w-full h-full items-center justify-center whitespace-nowrap">
             {cursorText}
           </span>
         </m.div>

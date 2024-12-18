@@ -2,33 +2,17 @@ import { ReactNode } from "react";
 import { m } from "framer-motion";
 import { defaultAnimation } from "../../../../shared/defaultAnimation";
 import { useCursor } from "../../../../features/cursorFollower/store";
-
-const ProjectUrl = ({
-  url,
-  icon,
-  id,
-}: {
-  url: string;
-  icon: ReactNode;
-  id: string;
-}) => {
+import { IoChevronForward } from "react-icons/io5";
+const ProjectUrl = ({ url, icon }: { url: string; icon: ReactNode }) => {
   const { setCursorType, setDefaultCursor, setCursorText } = useCursor(
     (state) => state
   );
   return (
     <m.div
-      id={id}
+      id="projectLink"
       onMouseEnter={(e) => {
         setCursorType((e.currentTarget as HTMLDivElement).id);
-        setCursorText(
-          id === "projectGitHub" ? (
-            <div className="flex gap-4 items-center">
-              Open in <span className="scale-[1.5]">{icon}</span>
-            </div>
-          ) : (
-            "Open project"
-          )
-        );
+        setCursorText(<IoChevronForward />);
       }}
       onMouseLeave={() => {
         setDefaultCursor();
