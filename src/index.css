@@ -126,6 +126,7 @@ b {
     --pink: 4, 81%, 59%;
     --orange: 23, 87%, 55%;
     --yellow: 49, 91%, 52%;
+    --light-purple: 262, 38%, 54%;
 
     --dark-green: 177, 70%, 30%;
     --accent: var(--white);

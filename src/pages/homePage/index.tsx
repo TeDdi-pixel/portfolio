@@ -3,7 +3,10 @@ import { lazy, Suspense, useEffect } from "react";
 import { useHeaderStore } from "../../widgets/header/store";
 import Spinner from "../../shared/spinner/Spinner";
 import CounterSpinner from "../../shared/spinner/CounterSpinner";
+import PerformanceManagement from "../../widgets/performanceManagement/ui";
+
 const SummarySection = lazy(() => import("../../widgets/sections/summary/ui"));
+
 const HardSkillsSection = lazy(
   () => import("../../widgets/sections/hardSkills/ui")
 );
@@ -59,6 +62,8 @@ const HomePage = () => {
           <Suspense fallback={<Spinner />}>{section.component}</Suspense>
         </div>
       ))}
+      <PerformanceManagement />
+
       <Suspense fallback={<CounterSpinner />}>
         <ViewersCounter />
       </Suspense>

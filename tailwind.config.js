@@ -38,6 +38,7 @@ module.exports = {
       },
       colors: {
         darkGreen: "hsl(var(--dark-green))",
+        lightPurple: "hsl(var(--light-purple))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

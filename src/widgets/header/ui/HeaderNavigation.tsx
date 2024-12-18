@@ -4,14 +4,22 @@ import { useHeaderStore } from "../store";
 import { m } from "framer-motion";
 import { useState } from "react";
 import { headerLinkConfig } from "../config/headerLink";
+import { useCursor } from "../../../features/cursorFollower/store";
 
 export const HeaderNavigation = () => {
   const { setSelectedLink } = useHeaderStore((state) => state);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-
+  const { setCursorType, setDefaultCursor } = useCursor((state) => state);
   return (
     <nav className="hidden bp1050:flex items-center">
-      <ul className="flex items-center gap-5">
+      <ul
+        id="navLinks"
+        className="flex items-center gap-5"
+        onMouseEnter={(e) => {
+          setCursorType((e.currentTarget as HTMLUListElement).id);
+        }}
+        onMouseLeave={setDefaultCursor}
+      >
         {links.map((link, linkIndex) => (
           <m.li
             {...headerLinkConfig(linkIndex)}

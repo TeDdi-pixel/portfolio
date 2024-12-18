@@ -55,10 +55,11 @@ const ViewersCounter = () => {
 
   return (
     <m.div
-      className="fixed bottom-5 right-5 z-1000 px-[13px] bp632:px-[20px] py-[6.5px] bp632:py-[10px] bg-background2 rounded-md shadow-custom2 flex items-center gap-[3px] justify-center"
+      className="fixed bottom-5 right-5 z-1000 max-w-[107px] w-full px-[13px] bp632:px-[15px] py-[6.5px] bp632:py-[10px] bg-background2 rounded-3xl shadow-custom2 flex items-center gap-[12px] justify-center"
       {...defaultAnimation({ margin: "20px 0px 0px 0px", direction: 15 })}
     >
       <FaEye className="w-[24px] h-[24px] text-white" />
+
       <Suspense fallback={<CounterSpinner />}>
         <Counter displayValue={displayValue} />
       </Suspense>

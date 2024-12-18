@@ -9,7 +9,7 @@ type Props = {
 const SkillWrapper = ({ children, skillId }: Props) => {
   return (
     <m.div
-      className="relative bg-texture flex items-center gap-[10px] px-[15px] md:px-[20px] py-[10px] rounded-md w-full bp461:w-auto justify-center bp461:justify-between"
+      className="relative bg-texture flex items-center gap-[10px] px-[15px] md:px-[20px] py-[10px] rounded-md w-full bp461:w-auto justify-center bp461:justify-between]"
       id={`photo-${skillId}`}
       {...defaultAnimation({ direction: 20, margin: "20px 0px 0px 20px" })}
     >
