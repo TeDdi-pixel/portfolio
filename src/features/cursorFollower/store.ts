@@ -48,6 +48,9 @@ export const useCursor = create<Store>((set) => ({
       case "contact":
         set({ cursorType: "contact" });
         break;
+      case "textImportant":
+        set({ cursorType: "textImportant" });
+        break;
       default:
         set({ cursorType: "default" });
         break;

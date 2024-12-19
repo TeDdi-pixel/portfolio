@@ -92,6 +92,16 @@ const FollowerContainer = ({ children }: { children: ReactNode }) => {
       x: mouseXPosition - 2,
       y: mouseYPosition - 20,
     },
+    textImportant: {
+      opacity: 1,
+      backgroundColor: "rgba(255, 255, 255, 1)",
+      color: "rgba(255, 255, 255, 1)",
+      height: 60,
+      width: 60,
+      fontSize: "18px",
+      x: mouseXPosition - 30,
+      y: mouseYPosition - 30,
+    },
     navLinks: {
       opacity: 0,
       height: 0,

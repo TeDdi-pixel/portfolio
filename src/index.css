@@ -9,6 +9,10 @@ b {
   color: #1fb2aa;
 }
 
+#text:hover {
+  cursor: none;
+}
+
 @layer utilities {
   .bg-react {
     background-image: url("../public/react_bg.webp");
