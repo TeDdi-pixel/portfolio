@@ -51,6 +51,15 @@ export const useCursor = create<Store>((set) => ({
       case "textImportant":
         set({ cursorType: "textImportant" });
         break;
+      case "cursorButton":
+        set({ cursorType: "cursorButton" });
+        break;
+      case "sliderLeft":
+        set({ cursorType: "sliderLeft" });
+        break;
+      case "sliderRight":
+        set({ cursorType: "sliderRight" });
+        break;
       default:
         set({ cursorType: "default" });
         break;

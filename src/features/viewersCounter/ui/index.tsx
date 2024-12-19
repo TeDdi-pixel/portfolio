@@ -55,7 +55,7 @@ const ViewersCounter = () => {
 
   return (
     <m.div
-      className="fixed bottom-5 right-5 z-1000 max-w-[107px] w-full px-[13px] bp632:px-[15px] py-[6.5px] bp632:py-[10px] bg-background2 rounded-3xl shadow-custom2 flex items-center gap-[12px] justify-center"
+      className="fixed bottom-5 right-5 z-1000 max-w-[105px] h-[55px] w-full px-[13px] bp632:px-[15px] py-[6.5px] bp632:py-[10px] bg-background2 rounded-3xl shadow-custom2 flex items-center gap-[5px] justify-center"
       {...defaultAnimation({ margin: "20px 0px 0px 0px", direction: 15 })}
     >
       <FaEye className="w-[24px] h-[24px] text-white" />

@@ -7,11 +7,12 @@ import { defaultAnimation } from "../../../shared/defaultAnimation";
 import { m } from "framer-motion";
 const PerformanceManagement = () => {
   const { isTouchDevice } = useCursor((state) => state);
+  // ${
+  //   !isTouchDevice ? "max-w-[107px]" : "max-w-[50px]"
+  // }
   return (
     <m.div
-      className={`fixed bottom-[77px] right-5 z-1000 px-[13px] bp632:px-[15px] py-[6.5px] bp632:py-[10px] bg-background2 rounded-3xl shadow-custom2 flex items-center gap-[3px] justify-center ${
-        !isTouchDevice ? "max-w-[107px]" : "max-w-[50px]"
-      }`}
+      className={`fixed bottom-[77px] right-5 z-1000 bp632:px-[15px] p-[10px] bg-background2 rounded-3xl shadow-custom2 flex items-center gap-[5px] justify-center`}
       {...defaultAnimation({ margin: "20px 0px 0px 0px", direction: 15 })}
     >
       <Suspense fallback={<CounterSpinner />}>

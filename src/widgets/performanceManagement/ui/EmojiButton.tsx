@@ -12,18 +12,24 @@ const EmojiButton = () => {
   );
   return (
     <button
-      className="w-[30px] h-[30px]"
+      className={`w-[35px] h-[35px] p-1 flex justify-center items-center rounded-md hover:bg-[#234674] transition-colors ${
+        isEmojisEnabled ? "bg-[#234674]" : "bg-transparent"
+      }`}
       onClick={toggleIsEmojisEnabled}
       id="performance"
       onMouseEnter={(e) => {
-        setCursorType((e.currentTarget as HTMLButtonElement).id);
-        setCursorText(
-          !isEmojisEnabled ? (
-            <IoIosWarning className="text-[40px] text-[#f4cb15]" />
-          ) : (
-            ""
-          )
-        );
+        if (!isEmojisEnabled) {
+          setCursorType((e.currentTarget as HTMLButtonElement).id);
+          setCursorText(
+            !isEmojisEnabled ? (
+              <IoIosWarning className="text-[35px] text-[#f4cb15] hover:scale-[1.2]" />
+            ) : (
+              ""
+            )
+          );
+        } else {
+          setCursorType("cursorButton");
+        }
       }}
       onMouseLeave={() => {
         setDefaultCursor();

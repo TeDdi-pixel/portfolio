@@ -122,6 +122,16 @@ const FollowerContainer = ({ children }: { children: ReactNode }) => {
         type: "spring",
       },
     },
+    cursorButton: {
+      opacity: 0,
+      height: 0,
+      width: 0,
+      x: mouseXPosition - 0,
+      y: mouseYPosition - 0,
+      transition: {
+        type: "spring",
+      },
+    },
     projectLink: {
       opacity: 1,
       backgroundColor: "rgb(125, 91, 182)",
@@ -161,6 +171,32 @@ const FollowerContainer = ({ children }: { children: ReactNode }) => {
         type: "spring",
       },
     },
+    sliderLeft: {
+      opacity: 1,
+      backgroundColor: "rgb(125, 91, 182)",
+      color: "rgba(255, 255, 255, 1)",
+      height: 60,
+      width: 60,
+      fontSize: "18px",
+      x: mouseXPosition - 30,
+      y: mouseYPosition - 30,
+      transition: {
+        type: "spring",
+      },
+    },
+    sliderRight: {
+      opacity: 1,
+      backgroundColor: "rgb(125, 91, 182)",
+      color: "rgba(255, 255, 255, 1)",
+      height: 60,
+      width: 60,
+      fontSize: "18px",
+      x: mouseXPosition - 30,
+      y: mouseYPosition - 30,
+      transition: {
+        type: "spring",
+      },
+    },
   };
 
   return (
@@ -173,7 +209,9 @@ const FollowerContainer = ({ children }: { children: ReactNode }) => {
             cursorType === "default" ||
             cursorType === "performance" ||
             cursorType === "projectLink" ||
-            cursorType === "text"
+            cursorType === "text" ||
+            cursorType === "sliderLeft" ||
+            cursorType === "sliderRight"
               ? ""
               : "mix-blend-difference"
           }`}
