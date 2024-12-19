@@ -69,7 +69,7 @@ export const Slider = ({ photos }: SliderProps) => {
 
   return (
     <Swiper
-      {...sliderConfig}
+      {...sliderConfig(isTouchDevice ?? true)}
       onSwiper={setSwiperInstance}
       style={{ maxWidth: swiperWidth }}
       className={`${
@@ -100,12 +100,8 @@ export const Slider = ({ photos }: SliderProps) => {
           />
         </SwiperSlide>
       ))}
-      {isTouchDevice && (
-        <>
-          <button onClick={() => swiperInstance?.slidePrev()}></button>
-          <button onClick={() => swiperInstance?.slideNext()}></button>
-        </>
-      )}
+      <button onClick={() => swiperInstance?.slidePrev()}></button>
+      <button onClick={() => swiperInstance?.slideNext()}></button>
     </Swiper>
   );
 };
