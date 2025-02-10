@@ -3,6 +3,7 @@ import { lazy, Suspense, useEffect } from "react";
 import { useHeaderStore } from "../../widgets/header/store";
 import Spinner from "../../shared/spinner/Spinner";
 import CounterSpinner from "../../shared/spinner/CounterSpinner";
+import { useCursor } from "../../features/cursorFollower/store";
 
 const PerformanceManagement = lazy(
   () => import("../../widgets/performanceManagement/ui")
@@ -28,6 +29,7 @@ const ViewersCounter = lazy(() => import("../../features/viewersCounter/ui"));
 
 const HomePage = () => {
   const { burgerMenu } = useHeaderStore((state) => state);
+  const { isTouchDevice } = useCursor((state) => state);
 
   useEffect(() => {
     if (burgerMenu) {
@@ -66,7 +68,7 @@ const HomePage = () => {
       ))}
 
       <Suspense fallback={<CounterSpinner />}>
-        <PerformanceManagement />
+        {isTouchDevice && <PerformanceManagement />}
         <ViewersCounter />
       </Suspense>
     </>
