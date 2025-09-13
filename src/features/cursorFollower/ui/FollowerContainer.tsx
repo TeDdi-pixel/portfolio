@@ -2,7 +2,6 @@ import { ReactNode, useEffect, useRef } from "react";
 import useMouse from "@react-hook/mouse-position";
 import { m } from "framer-motion";
 import { useCursor } from "../store";
-import { useEmojis } from "../../../entities/sectionTitle/store";
 import { variants as cursorVariants } from "./../config";
 
 const FollowerContainer = ({ children }: { children: ReactNode }) => {
@@ -14,7 +13,6 @@ const FollowerContainer = ({ children }: { children: ReactNode }) => {
     isTouchDevice,
     setIsTouchDevice,
   } = useCursor((state) => state);
-  const { setIsEmojisEnabled } = useEmojis((state) => state);
   const ref = useRef(null);
   const mouse = useMouse(ref, {
     enterDelay: 0,
@@ -25,7 +23,6 @@ const FollowerContainer = ({ children }: { children: ReactNode }) => {
     const checkTouchDevice = () => {
       const isTouchDevice =
         "ontouchstart" in window || navigator.maxTouchPoints > 0;
-      setIsEmojisEnabled(isTouchDevice);
       setIsTouchDevice(isTouchDevice);
       setIsCursorEnabled(!isTouchDevice);
     };
