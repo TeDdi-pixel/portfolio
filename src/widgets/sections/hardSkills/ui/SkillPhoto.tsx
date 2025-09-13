@@ -23,7 +23,9 @@ const SkillPhoto = ({ photoPath, photoAlt }: Props) => {
           photoAlt === "FSD_logo" || photoAlt === "Zustand_logo"
             ? "h-[50px]"
             : ""
-        }`}
+        }
+        ${photoAlt === "next_logo" ? "rounded-full" : ""}
+        `}
       />
     </div>
   );

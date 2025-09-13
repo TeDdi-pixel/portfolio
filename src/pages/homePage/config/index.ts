@@ -12,6 +12,7 @@ export const stackPhotos = [
   { id: 6, alt: "js_logo", path: "./js_logo.webp", tooltip: "JavaScript" },
   { id: 7, alt: "ts_logo", path: "./ts_logo.webp", tooltip: "TypeScript" },
   { id: 8, alt: "react_logo", path: "./react_logo.webp", tooltip: "React" },
+  { id: 8, alt: "next_logo", path: "./nextjs_logo.webp", tooltip: "NextJs" },
   { id: 9, alt: "redux_logo", path: "./redux_logo.webp", tooltip: "Redux" },
   {
     id: 10,
@@ -51,6 +52,12 @@ export const stackPhotos = [
   },
   {
     id: 16,
+    alt: "framer-motion logo",
+    path: "./mongo_db_logo.svg",
+    tooltip: "MongoDb",
+  },
+  {
+    id: 17,
     alt: "Github_logo",
     path: "./github_logo.webp",
     tooltip: "GitHub",
@@ -62,6 +69,20 @@ export type Photo = {
   alt: string;
   path: string;
 };
+
+const wordflowPhotos: Photo[] = [
+  { id: 0, alt: "home_page", path: "./wordflow/1.webp" },
+  { id: 1, alt: "unit_set_form", path: "./wordflow/2.webp" },
+  { id: 2, alt: "practice_board", path: "./wordflow/3.webp" },
+  { id: 3, alt: "practice_board_hint", path: "./wordflow/4.webp" },
+  { id: 4, alt: "results_page", path: "./wordflow/5.webp" },
+  { id: 5, alt: "library_page", path: "./wordflow/6.webp" },
+  { id: 6, alt: "terms_page", path: "./wordflow/7.webp" },
+  { id: 7, alt: "history_page", path: "./wordflow/8.webp" },
+  { id: 8, alt: "my_card_sets_page", path: "./wordflow/9.webp" },
+  { id: 9, alt: "login_page", path: "./wordflow/10.webp" },
+  { id: 10, alt: "login_page", path: "./wordflow/11.webp" },
+];
 
 const flowerShopPhotos: Photo[] = [
   { id: 0, alt: "entrance_photo", path: "./flowerShop/1.webp" },
@@ -123,57 +144,55 @@ const galleryPhotos: Photo[] = [
 export const projects = [
   {
     id: 0,
+    name: "WordFlow",
+    url: "https://trywordflow.vercel.app/",
+    description:
+      "WordFlow is a site that allows users to learn English words, create your own sets of cards, and use other people's sets. It helps you expand your vocabulary faster through interactive tools, personalized collections, and community-driven content.",
+    photos: wordflowPhotos,
+    github: "https://github.com/TeDdi-pixel/wordflow.git",
+  },
+  {
+    id: 1,
     name: "LockKipper",
     url: "https://lockkipper.vercel.app/",
-    description: `LockKipper is a password manager that allows users to store and 
-            manage their passwords. It supports managing various types of items such as 
-            logins, cards, and secure notes. While developing, I focused on implementing 
-            the user interfaces and core functionalities to ensure seamless item management 
-            and user experience.`,
+    description:
+      "LockKipper is a password manager that allows users to store and manage their passwords. It supports managing various types of items such as logins, cards, and secure notes. While developing, I focused on implementing the user interfaces and core functionalities to ensure seamless item management and user experience.",
     photos: lockKipperPhotos,
     github: "https://github.com/TeDdi-pixel/lockkipper.git",
   },
   {
-    id: 1,
+    id: 2,
     name: "FlowerShop",
     url: "https://flower-shop-theta.vercel.app/",
-    description: `FlowerShop is a graduation project integrated with AI. Developed
-            with using React, TypeScript, Redux, Firebase and AdenAI API within
-            the Feature-Sliced design architecture. In this project I focused on
-            creating the user interface and enabling core functionalities for
-            ordering flowers.`,
+    description:
+      "FlowerShop is a graduation project integrated with AI. Developed with using React, TypeScript, Redux, Firebase and AdenAI API within the Feature-Sliced design architecture. In this project I focused on creating the user interface and enabling core functionalities for ordering flowers.",
     photos: flowerShopPhotos,
     github: "https://github.com/TeDdi-pixel/flowerShop.git",
   },
   {
-    id: 2,
+    id: 3,
     name: "Chicory Studio",
     url: "https://chicory-studio-project-hc88.vercel.app/",
-    description: `
-          Chicory Studio is а team project that provides an ability to search the 
-          most popular anime in different categories by using anime search API.
-          My role included developing the homepage, anime pages, and user 
-          registration page. The project involved collaborative development and code reviews
-    `,
+    description:
+      "Chicory Studio is а team project that provides an ability to search the most popular anime in different categories by using anime search API. My role included developing the homepage, anime pages, and user registration page. The project involved collaborative development and code reviews",
     photos: chicoryStudioPhotos,
     github: "https://github.com/Naezdnizu-shvabr/chicory-studio.git",
   },
   {
-    id: 3,
+    id: 4,
     name: "Globe",
     url: "https://globe-s2zv.vercel.app/flights",
-    description: `The Globe project aims to develop a travel website interface with 
-          features such as user registration, profile customization (including 
-          image handling), and bank card creation.`,
+    description:
+      "The Globe project aims to develop a travel website interface with features such as user registration, profile customization (including image handling), and bank card creation.",
     photos: globePhotos,
     github: "https://github.com/TeDdi-pixel/globe.git",
   },
   {
-    id: 4,
+    id: 5,
     name: "Gallery",
     url: "https://gallery-app-virid.vercel.app/",
-    description: `The Gallery project focused on improving skills in API integration,
-          creating a gallery for displaying and searching images by keywords.`,
+    description:
+      "The Gallery project focused on improving skills in API integration, creating a gallery for displaying and searching images by keywords.",
     photos: galleryPhotos,
     github: "https://github.com/TeDdi-pixel/gallery-app.git",
   },

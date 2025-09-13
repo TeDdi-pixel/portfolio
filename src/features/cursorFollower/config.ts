@@ -145,9 +145,6 @@ export const variants = (mouseXPosition: number, mouseYPosition: number) => ({
     fontSize: "18px",
     x: mouseXPosition - 30,
     y: mouseYPosition - 30,
-    transition: {
-      type: "spring",
-    },
   },
   sliderRight: {
     opacity: 1,
@@ -158,8 +155,5 @@ export const variants = (mouseXPosition: number, mouseYPosition: number) => ({
     fontSize: "18px",
     x: mouseXPosition - 30,
     y: mouseYPosition - 30,
-    transition: {
-      type: "spring",
-    },
   },
 });
