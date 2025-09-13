@@ -17,7 +17,7 @@ const SoftSkillsSection = () => {
           <div className="flex gap-4 md:gap-[20px] items-center justify-center bp1232:justify-start flex-wrap">
             {softSkills.map((skill) => (
               <SkillWrapper key={skill.id} skillId={skill.id}>
-                <span className="text-accent text-[16px] bp461:text-[20px] md:text-[18px] lg:text-[23px] text-center">
+                <span className="text-accent text-[19px] bp461:text-[20px] md:text-[18px] lg:text-[23px] text-center">
                   {skill.name}
                 </span>
               </SkillWrapper>

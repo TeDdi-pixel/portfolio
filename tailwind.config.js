@@ -16,6 +16,7 @@ export default {
     extend: {
       screens: {
         bp353: "353px",
+        bp365: "365px",
         bp395: "395px",
         bp425: "425px",
         bp461: "461px",

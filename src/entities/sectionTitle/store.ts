@@ -12,6 +12,6 @@ export const useEmojis = create<Store>((set) => ({
     set((state) => ({ isEmojisEnabled: !state.isEmojisEnabled }));
   },
   setIsEmojisEnabled: (isTouchDevice: boolean) => {
-    set(() => ({ isEmojisEnabled: isTouchDevice }));
+    set(() => ({ isEmojisEnabled: false }));
   },
 }));

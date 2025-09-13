@@ -22,7 +22,7 @@ export const HardSkillsSection = () => {
           <div className="flex gap-4 md:gap-[20px] items-center flex-wrap justify-center bp1386:justify-start select-none">
             {stackPhotos.map((photo) => (
               <SkillWrapper key={photo.id} skillId={photo.id}>
-                <span className="text-accent text-[20px] bp461:text-[16px] md:text-[18px] lg:text-[23px]">
+                <span className="text-accent text-[19px] bp461:text-[16px] md:text-[18px] lg:text-[23px]">
                   {photo.tooltip}
                 </span>
                 <SkillPhoto photoPath={photo.path} photoAlt={photo.alt} />
