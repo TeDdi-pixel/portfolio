@@ -1,22 +1,9 @@
 import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
-import { FaSquarePhoneFlip } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
 
 export const contacts = [
   {
     id: 0,
-    title: (
-      <div className="flex items-center gap-5">
-        Phone{" "}
-        <span>
-          <FaSquarePhoneFlip />
-        </span>
-      </div>
-    ),
-    text: "+38(097)159-97-90",
-  },
-  {
-    id: 1,
     title: (
       <div className="flex items-center gap-5">
         Email{" "}
@@ -28,7 +15,7 @@ export const contacts = [
     text: "2003valuyga2003@gmail.com",
   },
   {
-    id: 2,
+    id: 1,
     title: (
       <div className="flex items-center gap-5">
         Telegram{" "}
@@ -40,7 +27,7 @@ export const contacts = [
     linkText: "https://t.me/whyME_3",
   },
   {
-    id: 3,
+    id: 2,
     title: (
       <div className="flex items-center gap-5">
         LinkedIn{" "}
@@ -52,7 +39,7 @@ export const contacts = [
     linkText: "https://www.linkedin.com/in/vladislav-valuga-546327231/",
   },
   {
-    id: 4,
+    id: 3,
     title: (
       <div className="flex items-center gap-5">
         GitHub{" "}

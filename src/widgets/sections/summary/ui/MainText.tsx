@@ -23,7 +23,7 @@ export const MainText = () => {
           onMouseEnter={(e) => setCursorType((e.target as HTMLSpanElement).id)}
           onMouseLeave={setDefaultCursor}
         >
-          one year of commercial experience
+          more than one year of commercial experience
         </span>
         , I have honed my skills in delivering high-quality projects in a
         professional environment. For me, web development is not just a job —
