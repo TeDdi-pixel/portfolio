@@ -12,7 +12,7 @@ export const contacts = [
         </span>
       </div>
     ),
-    text: "2003valuyga2003@gmail.com",
+    text: "valiuha.vladyslav@gmail.com",
   },
   {
     id: 1,
@@ -36,7 +36,7 @@ export const contacts = [
         </span>
       </div>
     ),
-    linkText: "https://www.linkedin.com/in/vladislav-valuga-546327231/",
+    linkText: "https://www.linkedin.com/in/vladyslav-valiuha-546327231/",
   },
   {
     id: 3,
