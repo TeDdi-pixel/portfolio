@@ -20,7 +20,7 @@ const MailLink = ({
         setDefaultCursor();
       }}
       {...defaultAnimation({ margin: "-25px 0px -25px 0px" })}
-      className="text-accent-foreground text-[16px] md:text-[18px] lg:text-[23px] max-w-[778px] break-words mb-[7px] hover:underline hover:decoration-texture"
+      className="text-accent-foreground text-[16px] md:text-[18px] lg:text-[23px] max-w-[778px] w-max break-words mb-[7px] hover:underline hover:decoration-texture"
     >
       <a href={`mailto:${contactLink}`}>{contactText}</a>
     </m.div>
