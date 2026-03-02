@@ -40,7 +40,7 @@ const ViewersCounter = () => {
           duration: 7,
           ease: [0.42, 0, 0.58, 1],
         }),
-      500
+      500,
     );
     return () => clearTimeout(animation);
   }, [viewersCounter]);

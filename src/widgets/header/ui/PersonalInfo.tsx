@@ -9,7 +9,7 @@ const PersonalInfo = () => {
     >
       <span className="hidden bp632:block w-7 h-5 bg-texture rounded-full animate-spin-slow relative"></span>
       <div className="font-bold text-[22px] text-accent inline-block">
-        Valuga Vladislav
+        Valiuha Vladyslav
       </div>
       <div className="text-[16px] inline-block text-accent-foreground">
         Front-end developer

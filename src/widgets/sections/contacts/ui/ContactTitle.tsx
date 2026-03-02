@@ -18,7 +18,7 @@ const ContactTitle = ({ contactTitle }: Props) => {
       onMouseLeave={() => {
         setDefaultCursor();
       }}
-      className={`text-texture text-[24px] sm:text-[28px] lg:text-[32px] mb-2`}
+      className={`text-texture text-[24px] sm:text-[28px] lg:text-[32px] mb-2 w-max`}
       {...defaultAnimation({ margin: "-35px 0px -35px 0px", direction: -20 })}
     >
       {contactTitle}

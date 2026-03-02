@@ -4,8 +4,8 @@ import useWidth from "../../../../hooks/useWidth";
 import { contacts } from "../config";
 import ContactTitle from "./ContactTitle";
 import ContactLink from "./ContactLink";
-import RegularContact from "./RegularContact";
 import useSectionInView from "../../../../hooks/useSectionInView";
+import MailLink from "./MailLink";
 
 const ContactsSection = () => {
   const { active } = useWidth(1023);
@@ -28,7 +28,12 @@ const ContactsSection = () => {
             <div key={contact.id}>
               <ContactTitle contactTitle={contact.title} />
 
-              {contact.text && <RegularContact contactText={contact.text} />}
+              {contact.text && (
+                <MailLink
+                  contactText={contact.text}
+                  contactLink={contact.href}
+                />
+              )}
               {contact.linkText && (
                 <ContactLink contactLink={contact.linkText} />
               )}

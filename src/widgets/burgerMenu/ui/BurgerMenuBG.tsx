@@ -2,7 +2,6 @@ import { m } from "framer-motion";
 import { burgerBGAnimation } from "../config/burgerBGAnimation";
 
 export const BurgerMenuBG = () => {
-
   return (
     <m.div
       {...burgerBGAnimation()}

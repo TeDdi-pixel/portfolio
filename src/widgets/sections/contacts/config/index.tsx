@@ -12,6 +12,7 @@ export const contacts = [
         </span>
       </div>
     ),
+    href: "valiuha.vladyslav@gmail.com",
     text: "valiuha.vladyslav@gmail.com",
   },
   {

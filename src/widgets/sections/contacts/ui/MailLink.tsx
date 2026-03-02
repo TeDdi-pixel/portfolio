@@ -2,7 +2,13 @@ import { m } from "framer-motion";
 import { defaultAnimation } from "../../../../shared/defaultAnimation";
 import { useCursor } from "../../../../features/cursorFollower/store";
 
-const RegularContact = ({ contactText }: { contactText: string }) => {
+const MailLink = ({
+  contactText,
+  contactLink,
+}: {
+  contactText: string;
+  contactLink: string;
+}) => {
   const { setCursorType, setDefaultCursor } = useCursor((state) => state);
   return (
     <m.div
@@ -14,11 +20,11 @@ const RegularContact = ({ contactText }: { contactText: string }) => {
         setDefaultCursor();
       }}
       {...defaultAnimation({ margin: "-25px 0px -25px 0px" })}
-      className="text-accent-foreground text-[16px] md:text-[18px] lg:text-[23px] max-w-[778px] break-words mb-[7px]"
+      className="text-accent-foreground text-[16px] md:text-[18px] lg:text-[23px] max-w-[778px] break-words mb-[7px] hover:underline hover:decoration-texture"
     >
-      {contactText}
+      <a href={`mailto:${contactLink}`}>{contactText}</a>
     </m.div>
   );
 };
 
-export default RegularContact;
+export default MailLink;

@@ -6,7 +6,7 @@ const ContactLink = ({ contactLink }: { contactLink: string }) => {
   const { setCursorType, setDefaultCursor } = useCursor((state) => state);
   return (
     <m.div
-      className="text-accent-foreground text-[16px] md:text-[18px] lg:text-[23px] max-w-[778px] break-words mb-[15px]"
+      className="text-accent-foreground text-[16px] md:text-[18px] lg:text-[23px] max-w-[778px] break-words mb-[15px] w-max"
       {...defaultAnimation({ margin: "-25px 0px -25px 0px" })}
     >
       {contactLink && (
